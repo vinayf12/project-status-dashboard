@@ -105,16 +105,16 @@
 
   .board {
     display: flex;
+    flex-wrap: wrap;
     gap: 18px;
-    overflow-x: auto;
     align-items: flex-start;
     padding-top: 22px;
     padding-bottom: 12px;
   }
   .column {
-    min-width: 270px;
-    max-width: 290px;
-    flex: 1 0 270px;
+    width: 280px;
+    flex: 0 0 280px;
+    margin-bottom: 12px;
   }
   .column-header {
     display: inline-flex;
