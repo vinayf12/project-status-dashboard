@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex, nofollow, noarchive" />
-<title>Project Status Dashboard</title>
+<title>Vinay Pittampally</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -136,6 +136,7 @@
   .board {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 18px;
     align-items: flex-start;
     padding-top: 22px;
@@ -244,68 +245,37 @@
     margin-top: 6px;
   }
 
-  .manual-note-wrap {
+  .note-block {
     margin-top: 10px;
   }
-  .manual-note {
-    display: flex;
-    gap: 6px;
-    align-items: flex-start;
-    font-size: 11.5px;
-    line-height: 1.4;
-    color: #6b5a1f;
-    background: rgba(253, 230, 138, 0.45);
-    border: 1px solid rgba(217, 174, 33, 0.35);
-    border-radius: 10px;
-    padding: 8px 10px;
-    white-space: pre-wrap;
-  }
-  .note-edit-btn {
-    font: inherit;
-    font-size: 11px;
-    font-weight: 600;
-    color: #6366f1;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px 0 0;
-  }
-  .note-edit-btn:hover {
-    text-decoration: underline;
-  }
-  .note-editor textarea {
+  .note-input {
     width: 100%;
     font: inherit;
     font-size: 11.5px;
     line-height: 1.4;
+    color: #6b5a1f;
+    background: rgba(253, 230, 138, 0.35);
+    border: 1px solid rgba(217, 174, 33, 0.3);
     border-radius: 10px;
-    border: 1px solid rgba(99, 102, 241, 0.4);
-    padding: 8px 10px;
+    padding: 7px 9px;
     resize: vertical;
-    min-height: 56px;
-    background: rgba(255, 255, 255, 0.7);
+    min-height: 40px;
+    transition: background 0.15s ease, border-color 0.15s ease;
   }
-  .note-editor-actions {
-    display: flex;
-    gap: 8px;
-    margin-top: 6px;
+  .note-input:focus {
+    outline: none;
+    background: rgba(253, 230, 138, 0.5);
+    border-color: rgba(217, 174, 33, 0.55);
   }
-  .note-editor-actions button {
-    font: inherit;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 999px;
-    cursor: pointer;
-    border: 1px solid transparent;
+  .note-input::placeholder {
+    color: #b0a488;
   }
-  .note-save-btn {
-    background: #6366f1;
-    color: #fff;
-  }
-  .note-cancel-btn {
-    background: rgba(0, 0, 0, 0.06);
-    color: var(--text);
+  .note-status {
+    display: block;
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-top: 3px;
+    height: 12px;
   }
 
   .empty-col {
@@ -396,7 +366,7 @@
 
 <div id="gate">
   <div id="gate-card">
-    <h2>Project Status</h2>
+    <h2>Vinay Pittampally</h2>
     <p>Enter the passphrase your team shared with you</p>
     <input id="gate-input" type="password" placeholder="Passphrase" autocomplete="off" />
     <button id="gate-submit">View Dashboard</button>
@@ -407,13 +377,12 @@
 <div class="page">
   <header>
     <div class="brand">
-      <h1>Project Status</h1>
+      <h1>Vinay Pittampally</h1>
       <p>Live status of active client projects, pulled from Slack</p>
     </div>
     <div class="header-right">
       <div id="updated"></div>
       <button id="syncBtn" class="btn" title="Request a fresh Slack/Asana scan (picked up within ~20 min)">🔄 Sync</button>
-      <button id="editToggleBtn" class="btn" title="Unlock note editing">✏️ Edit</button>
     </div>
   </header>
 
@@ -423,7 +392,7 @@
 
 <script>
   // Casual speed-bump only, not real security (page source + data.json are still directly fetchable). Change this to whatever you want.
-  const VIEW_PASSPHRASE = "superside-status-26";
+  const VIEW_PASSPHRASE = "12345";
 
   function unlockGate() {
     document.getElementById("gate").style.display = "none";
@@ -476,10 +445,7 @@
 
   // Requests go through a small Cloudflare Worker proxy that holds the real GitHub token server-side — no secret lives in this page.
   const WORKER_URL = "https://project-status-dashboard-worker.vinaypittampally.workers.dev";
-  const EDIT_PASSPHRASE = "vinay-dashboard-2026";
 
-  let editUnlocked = sessionStorage.getItem("dashboardEditUnlocked") === "1";
-  let editingProject = null;
   let LAST_DATA = null;
 
   async function requestSync() {
@@ -498,38 +464,6 @@
     if (!res.ok || !body.ok) throw new Error(body.error || `Save failed: ${res.status}`);
     return body.data;
   }
-
-  function updateEditToggleUI() {
-    const btn = document.getElementById("editToggleBtn");
-    if (editUnlocked) {
-      btn.textContent = "🔓 Edit: On";
-      btn.classList.add("active");
-    } else {
-      btn.textContent = "✏️ Edit";
-      btn.classList.remove("active");
-    }
-  }
-
-  document.getElementById("editToggleBtn").addEventListener("click", () => {
-    if (editUnlocked) {
-      editUnlocked = false;
-      sessionStorage.removeItem("dashboardEditUnlocked");
-      editingProject = null;
-      updateEditToggleUI();
-      render(LAST_DATA);
-      return;
-    }
-    const pass = prompt("Enter edit passphrase:");
-    if (pass === null) return;
-    if (pass === EDIT_PASSPHRASE) {
-      editUnlocked = true;
-      sessionStorage.setItem("dashboardEditUnlocked", "1");
-      updateEditToggleUI();
-      render(LAST_DATA);
-    } else {
-      alert("Incorrect passphrase.");
-    }
-  });
 
   document.getElementById("syncBtn").addEventListener("click", async () => {
     const btn = document.getElementById("syncBtn");
@@ -566,6 +500,7 @@
   }
 
   function render(data) {
+    LAST_DATA = data;
     document.getElementById("updated").textContent = fmtUpdatedAt(data.updated_at);
 
     const projects = data.projects || [];
@@ -608,23 +543,6 @@
         const team = Array.isArray(p.team) ? p.team.filter(Boolean) : [];
         const pn = p.project_number;
         const manualNote = p.manual_note || "";
-        let noteSection;
-        if (editingProject === pn) {
-          noteSection = `
-            <div class="note-editor" data-project="${pn}">
-              <textarea id="note-textarea-${pn}" placeholder="Add a private-ish note...">${escapeHtml(manualNote)}</textarea>
-              <div class="note-editor-actions">
-                <button class="note-save-btn" data-project="${pn}">Save</button>
-                <button class="note-cancel-btn" data-project="${pn}">Cancel</button>
-              </div>
-            </div>`;
-        } else {
-          noteSection = `
-            <div class="manual-note-wrap">
-              ${manualNote ? `<div class="manual-note">📌 ${escapeHtml(manualNote)}</div>` : ""}
-              ${editUnlocked ? `<button class="note-edit-btn" data-project="${pn}">${manualNote ? "Edit note" : "+ Add note"}</button>` : ""}
-            </div>`;
-        }
         card.innerHTML = `
           <div class="card-title-row">
             <div class="card-title">${escapeHtml(p.display_name || p.channel_name || "Untitled project")}</div>
@@ -634,7 +552,10 @@
           <div class="card-note">${escapeHtml(p.note || "")}</div>
           <div class="card-footer">Last activity: ${fmtDate(p.last_activity)}</div>
           ${team.length ? `<div class="card-team">${escapeHtml(team.join(", "))}</div>` : ""}
-          ${noteSection}
+          <div class="note-block">
+            <textarea class="note-input" data-project="${pn}" placeholder="Add a note...">${escapeHtml(manualNote)}</textarea>
+            <span class="note-status" data-project-status="${pn}"></span>
+          </div>
         `;
         col.appendChild(card);
       });
@@ -649,41 +570,34 @@
     return div.innerHTML;
   }
 
-  document.getElementById("board").addEventListener("click", async (e) => {
-    const editBtn = e.target.closest(".note-edit-btn");
-    if (editBtn) {
-      editingProject = editBtn.dataset.project;
-      render(LAST_DATA);
-      return;
-    }
-    const cancelBtn = e.target.closest(".note-cancel-btn");
-    if (cancelBtn) {
-      editingProject = null;
-      render(LAST_DATA);
-      return;
-    }
-    const saveBtn = e.target.closest(".note-save-btn");
-    if (saveBtn) {
-      const pn = saveBtn.dataset.project;
-      const textarea = document.getElementById(`note-textarea-${pn}`);
-      const value = textarea ? textarea.value : "";
-      saveBtn.disabled = true;
-      saveBtn.textContent = "Saving…";
+  document.getElementById("board").addEventListener(
+    "focusout",
+    async (e) => {
+      const textarea = e.target.closest(".note-input");
+      if (!textarea) return;
+      const pn = textarea.dataset.project;
+      const value = textarea.value;
+      const existing = (LAST_DATA.projects || []).find((p) => p.project_number === pn);
+      if (existing && (existing.manual_note || "") === value.trim()) return; // no change, skip save
+
+      const statusEl = document.querySelector(`.note-status[data-project-status="${pn}"]`);
+      if (statusEl) statusEl.textContent = "Saving…";
       try {
         const updatedData = await saveManualNote(pn, value);
         LAST_DATA = updatedData;
-        editingProject = null;
-        render(LAST_DATA);
+        if (statusEl) {
+          statusEl.textContent = "Saved";
+          setTimeout(() => {
+            if (statusEl) statusEl.textContent = "";
+          }, 1500);
+        }
       } catch (err) {
+        if (statusEl) statusEl.textContent = "Couldn't save";
         alert("Couldn't save note: " + err.message);
-        saveBtn.disabled = false;
-        saveBtn.textContent = "Save";
       }
-      return;
-    }
-  });
-
-  updateEditToggleUI();
+    },
+    true
+  );
 
   fetch("data.json", { cache: "no-store" })
     .then((r) => r.json())
