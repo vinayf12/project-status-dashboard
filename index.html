@@ -174,12 +174,13 @@
   }
 
   .card {
-    background: var(--glass-strong);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border: 1px solid var(--glass-border);
     border-radius: 18px;
-    padding: 14px 16px;
+    padding: 0;
+    overflow: hidden;
     margin-bottom: 12px;
     box-shadow: 0 8px 24px rgba(31, 41, 55, 0.06);
     transition: transform 0.18s ease, box-shadow 0.18s ease;
@@ -187,6 +188,14 @@
   .card:hover {
     transform: translateY(-3px);
     box-shadow: 0 16px 34px rgba(31, 41, 55, 0.12);
+  }
+  .card-header {
+    padding: 14px 16px 11px;
+  }
+  .card-body {
+    padding: 13px 16px 15px;
+    background: rgba(17, 24, 39, 0.045);
+    box-shadow: inset 0 1px 3px rgba(17, 24, 39, 0.07);
   }
   .card-title-row {
     display: flex;
@@ -548,17 +557,21 @@
         const pn = p.project_number;
         const manualNote = p.manual_note || "";
         card.innerHTML = `
-          <div class="card-title-row">
-            <div class="card-title">${escapeHtml(p.display_name || p.channel_name || "Untitled project")}</div>
-            ${slackUrl ? `<a class="slack-link" href="${slackUrl}" target="_blank" rel="noopener" title="Open #${escapeHtml(p.channel_name || "")} in Slack">${SLACK_ICON}</a>` : ""}
+          <div class="card-header">
+            <div class="card-title-row">
+              <div class="card-title">${escapeHtml(p.display_name || p.channel_name || "Untitled project")}</div>
+              ${slackUrl ? `<a class="slack-link" href="${slackUrl}" target="_blank" rel="noopener" title="Open #${escapeHtml(p.channel_name || "")} in Slack">${SLACK_ICON}</a>` : ""}
+            </div>
+            <div class="card-number">#${escapeHtml(p.project_number || "—")}</div>
           </div>
-          <div class="card-number">#${escapeHtml(p.project_number || "—")}</div>
-          <div class="card-note">${escapeHtml(p.note || "")}</div>
-          <div class="card-footer">Last activity: ${fmtDate(p.last_activity)}</div>
-          ${team.length ? `<div class="card-team">${escapeHtml(team.join(", "))}</div>` : ""}
-          <div class="note-block">
-            <textarea class="note-input" data-project="${pn}" placeholder="Notes">${escapeHtml(manualNote)}</textarea>
-            <span class="note-status" data-project-status="${pn}"></span>
+          <div class="card-body">
+            <div class="card-note">${escapeHtml(p.note || "")}</div>
+            <div class="card-footer">Last activity: ${fmtDate(p.last_activity)}</div>
+            ${team.length ? `<div class="card-team">${escapeHtml(team.join(", "))}</div>` : ""}
+            <div class="note-block">
+              <textarea class="note-input" data-project="${pn}" placeholder="Notes">${escapeHtml(manualNote)}</textarea>
+              <span class="note-status" data-project-status="${pn}"></span>
+            </div>
           </div>
         `;
         col.appendChild(card);
