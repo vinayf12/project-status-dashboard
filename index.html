@@ -4,84 +4,154 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Project Status Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f4f5f7;
-    --card-bg: #ffffff;
-    --border: #e2e4e9;
     --text: #1c1f26;
-    --text-muted: #6b7280;
+    --text-muted: #667085;
+    --glass: rgba(255, 255, 255, 0.5);
+    --glass-strong: rgba(255, 255, 255, 0.68);
+    --glass-border: rgba(255, 255, 255, 0.65);
     --todo: #94a3b8;
-    --progress: #3b82f6;
-    --sent: #8b5cf6;
+    --progress: #6366f1;
+    --sent: #a855f7;
     --waiting: #f59e0b;
-    --blocked: #ef4444;
-    --done: #22c55e;
+    --blocked: #f43f5e;
+    --done: #10b981;
     --unclear: #9ca3af;
   }
   * { box-sizing: border-box; }
+  html, body {
+    min-height: 100%;
+  }
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    background: var(--bg);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
     color: var(--text);
+    background: linear-gradient(180deg, #d6ecff 0%, #e3f3ea 45%, #f2f7ec 100%);
+    position: relative;
   }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: -15%;
+    background:
+      radial-gradient(38% 28% at 18% 12%, rgba(255, 255, 255, 0.75), transparent 60%),
+      radial-gradient(36% 34% at 88% 8%, rgba(147, 197, 253, 0.55), transparent 60%),
+      radial-gradient(46% 42% at 78% 88%, rgba(167, 243, 208, 0.55), transparent 60%),
+      radial-gradient(34% 32% at 6% 82%, rgba(216, 180, 254, 0.45), transparent 60%),
+      radial-gradient(30% 26% at 50% 45%, rgba(253, 224, 171, 0.35), transparent 60%);
+    filter: blur(50px);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px 24px 48px;
+  }
+
   header {
-    padding: 28px 32px 16px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 14px;
+    padding: 18px 26px;
+    background: var(--glass);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+    border: 1px solid var(--glass-border);
+    border-radius: 22px;
+    box-shadow: 0 10px 34px rgba(31, 41, 55, 0.07);
   }
-  header h1 {
-    margin: 0 0 4px;
-    font-size: 22px;
-    font-weight: 700;
+  .brand h1 {
+    margin: 0 0 2px;
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 26px;
+    letter-spacing: -0.01em;
   }
-  header p {
+  .brand p {
     margin: 0;
     color: var(--text-muted);
-    font-size: 13px;
+    font-size: 12.5px;
   }
   #updated {
     font-size: 12px;
     color: var(--text-muted);
-    text-align: right;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 6px 12px;
+    border-radius: 999px;
   }
+
   .summary {
     display: flex;
-    gap: 8px;
-    padding: 0 32px 20px;
+    gap: 10px;
+    padding: 18px 2px 22px;
     flex-wrap: wrap;
   }
   .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
     font-size: 12px;
     font-weight: 600;
-    padding: 4px 10px;
+    padding: 7px 14px;
     border-radius: 999px;
-    color: #fff;
+    color: #374151;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
   }
+  .chip:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(31, 41, 55, 0.1);
+  }
+  .chip.active {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 6px 18px rgba(31, 41, 55, 0.14);
+  }
+  .chip .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
   .board {
     display: flex;
-    gap: 16px;
-    padding: 0 32px 32px;
+    gap: 18px;
     overflow-x: auto;
     align-items: flex-start;
+    padding-bottom: 12px;
   }
   .column {
-    background: transparent;
-    min-width: 260px;
-    max-width: 280px;
-    flex: 1 0 260px;
+    min-width: 270px;
+    max-width: 290px;
+    flex: 1 0 270px;
   }
   .column-header {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 10px;
-    font-size: 13px;
+    margin-bottom: 12px;
+    padding: 6px 13px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(10px);
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.04em;
@@ -96,19 +166,27 @@
     color: var(--text-muted);
     font-weight: 500;
   }
+
   .card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 12px 14px;
-    margin-bottom: 10px;
-    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+    background: var(--glass-strong);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    border-radius: 18px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 8px 24px rgba(31, 41, 55, 0.06);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 34px rgba(31, 41, 55, 0.12);
   }
   .card-title-row {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 6px;
+    gap: 8px;
   }
   .card-title {
     font-size: 13.5px;
@@ -121,52 +199,80 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 18px;
-    height: 18px;
-    margin-top: 1px;
-    opacity: 0.65;
-    transition: opacity 0.15s ease;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 8px rgba(31, 41, 55, 0.06);
+    opacity: 0.85;
+    transition: opacity 0.15s ease, transform 0.15s ease;
   }
   .slack-link:hover {
     opacity: 1;
+    transform: scale(1.08);
   }
   .slack-link svg {
-    width: 14px;
-    height: 14px;
+    width: 13px;
+    height: 13px;
   }
   .card-number {
     font-size: 11px;
     color: var(--text-muted);
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
   .card-note {
     font-size: 12px;
     color: #4b5563;
-    line-height: 1.4;
-    margin-bottom: 8px;
+    line-height: 1.45;
+    margin-bottom: 10px;
   }
   .card-footer {
     font-size: 11px;
     color: var(--text-muted);
   }
-  .card-team {
-    font-size: 10.5px;
-    color: #9aa1ac;
-    margin-top: 3px;
+
+  .avatar-stack {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
   }
+  .avatar {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    font-weight: 700;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    margin-left: -7px;
+    flex-shrink: 0;
+  }
+  .avatar:first-child {
+    margin-left: 0;
+  }
+  .avatar-more {
+    background: #eef0f3 !important;
+    color: #5b6370;
+  }
+
   .empty-col {
     font-size: 12px;
     color: var(--text-muted);
     font-style: italic;
-    padding: 8px 2px;
+    padding: 8px 4px;
   }
   #error {
-    margin: 32px;
+    margin: 20px 2px;
     padding: 16px;
-    background: #fef2f2;
+    background: rgba(254, 242, 242, 0.75);
+    backdrop-filter: blur(10px);
     border: 1px solid #fecaca;
-    border-radius: 8px;
+    border-radius: 14px;
     color: #991b1b;
     font-size: 13px;
     display: none;
@@ -175,17 +281,19 @@
 </head>
 <body>
 
-<header>
-  <div>
-    <h1>Project Status Dashboard</h1>
-    <p>Live status of active client projects, pulled from Slack</p>
-  </div>
-  <div id="updated"></div>
-</header>
+<div class="page">
+  <header>
+    <div class="brand">
+      <h1>Project Status</h1>
+      <p>Live status of active client projects, pulled from Slack</p>
+    </div>
+    <div id="updated"></div>
+  </header>
 
-<div class="summary" id="summary"></div>
-<div id="error"></div>
-<div class="board" id="board"></div>
+  <div class="summary" id="summary"></div>
+  <div id="error"></div>
+  <div class="board" id="board"></div>
+</div>
 
 <script>
   const STATUS_ORDER = [
@@ -208,6 +316,8 @@
     "Unclear": "var(--unclear)",
   };
 
+  const AVATAR_PALETTE = ["#6366f1", "#ec4899", "#10b981", "#f59e0b", "#3b82f6", "#a855f7", "#14b8a6", "#f43f5e", "#0ea5e9", "#84cc16"];
+
   const SLACK_ICON = `<svg viewBox="0 0 122.8 122.8" xmlns="http://www.w3.org/2000/svg">
     <path d="M25.8 77.6c0 7.1-5.8 12.9-12.9 12.9S0 84.7 0 77.6s5.8-12.9 12.9-12.9h12.9v12.9z" fill="#e01e5a"/>
     <path d="M32.3 77.6c0-7.1 5.8-12.9 12.9-12.9s12.9 5.8 12.9 12.9v32.3c0 7.1-5.8 12.9-12.9 12.9s-12.9-5.8-12.9-12.9V77.6z" fill="#e01e5a"/>
@@ -218,6 +328,9 @@
     <path d="M77.6 97c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9-12.9-5.8-12.9-12.9V97h12.9z" fill="#ecb22e"/>
     <path d="M77.6 90.5c-7.1 0-12.9-5.8-12.9-12.9s5.8-12.9 12.9-12.9h32.3c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9H77.6z" fill="#ecb22e"/>
   </svg>`;
+
+  let activeFilter = null;
+  let LAST_DATA = null;
 
   function fmtDate(iso) {
     if (!iso) return "—";
@@ -235,7 +348,29 @@
     });
   }
 
+  function colorFor(name) {
+    let hash = 0;
+    for (let i = 0; i < name.length; i++) hash = name.charCodeAt(i) + ((hash << 5) - hash);
+    return AVATAR_PALETTE[Math.abs(hash) % AVATAR_PALETTE.length];
+  }
+
+  function initials(name) {
+    return name.trim().slice(0, 2).toUpperCase();
+  }
+
+  function renderAvatars(team) {
+    if (!team || !team.length) return "";
+    const shown = team.slice(0, 4);
+    const extra = team.length - shown.length;
+    const bubbles = shown
+      .map((n) => `<div class="avatar" style="background:${colorFor(n)}" title="${escapeHtml(n)}">${escapeHtml(initials(n))}</div>`)
+      .join("");
+    const more = extra > 0 ? `<div class="avatar avatar-more" title="${escapeHtml(team.slice(4).join(', '))}">+${extra}</div>` : "";
+    return `<div class="avatar-stack">${bubbles}${more}</div>`;
+  }
+
   function render(data) {
+    LAST_DATA = data;
     document.getElementById("updated").textContent = fmtUpdatedAt(data.updated_at);
 
     const projects = data.projects || [];
@@ -253,16 +388,20 @@
       const n = byStatus[s].length;
       if (!n) return;
       const chip = document.createElement("span");
-      chip.className = "chip";
-      chip.style.background = STATUS_COLOR[s];
-      chip.textContent = `${s}: ${n}`;
+      chip.className = "chip" + (activeFilter === s ? " active" : "");
+      chip.innerHTML = `<span class="dot" style="background:${STATUS_COLOR[s]}"></span>${s} (${n})`;
+      chip.addEventListener("click", () => {
+        activeFilter = activeFilter === s ? null : s;
+        render(LAST_DATA);
+      });
       summary.appendChild(chip);
     });
 
     // board
     const board = document.getElementById("board");
     board.innerHTML = "";
-    STATUS_ORDER.forEach((status) => {
+    const statuses = activeFilter ? [activeFilter] : STATUS_ORDER;
+    statuses.forEach((status) => {
       const items = byStatus[status].slice().sort((a, b) =>
         (b.last_activity || "").localeCompare(a.last_activity || "")
       );
@@ -297,7 +436,7 @@
           <div class="card-number">#${escapeHtml(p.project_number || "—")}</div>
           <div class="card-note">${escapeHtml(p.note || "")}</div>
           <div class="card-footer">Last activity: ${fmtDate(p.last_activity)}</div>
-          ${team.length ? `<div class="card-team">${escapeHtml(team.join(", "))}</div>` : ""}
+          ${renderAvatars(team)}
         `;
         col.appendChild(card);
       });
