@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-08T07:20:00Z",
+  "updated_at": "2026-07-08T07:35:00Z",
   "projects": [
     {
       "project_number": "224533",
@@ -110,16 +110,6 @@
       "note": "Deliberately on hold until mid-to-late July per PM; PM briefly OOO but coverage is in place, still an owned/active project.",
       "last_activity": "2026-06-30",
       "team": ["Amori", "Vinay", "Benitta", "Franco"]
-    },
-    {
-      "project_number": "200404",
-      "channel_id": "C0AH3M23QFJ",
-      "channel_name": "200404-dev-avetta-email-design-system",
-      "display_name": "Avetta — Email Design System (Dev)",
-      "status": "In Progress",
-      "note": "Ongoing dev/support channel; template partition access restored and Outlook fix template updated, general Q&A thread active as of 2026-07-07.",
-      "last_activity": "2026-07-07",
-      "team": ["Daniel", "Francisco"]
     }
   ]
 }
