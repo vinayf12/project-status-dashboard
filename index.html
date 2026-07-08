@@ -325,9 +325,84 @@
     font-size: 13px;
     display: none;
   }
+
+  #gate {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #d6ecff 0%, #e3f3ea 45%, #f2f7ec 100%);
+  }
+  #gate-card {
+    width: 320px;
+    max-width: 88vw;
+    padding: 28px 26px;
+    background: var(--glass-strong);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(31, 41, 55, 0.12);
+    text-align: center;
+  }
+  #gate-card h2 {
+    font-family: "Fraunces", Georgia, serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0 0 6px;
+  }
+  #gate-card p {
+    margin: 0 0 16px;
+    font-size: 12.5px;
+    color: var(--text-muted);
+  }
+  #gate-input {
+    width: 100%;
+    font: inherit;
+    font-size: 14px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  #gate-submit {
+    width: 100%;
+    font: inherit;
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: none;
+    background: #6366f1;
+    color: #fff;
+    cursor: pointer;
+  }
+  #gate-error {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #b91c1c;
+    display: none;
+  }
+  .page {
+    display: none;
+  }
 </style>
 </head>
 <body>
+
+<div id="gate">
+  <div id="gate-card">
+    <h2>Project Status</h2>
+    <p>Enter the passphrase your team shared with you</p>
+    <input id="gate-input" type="password" placeholder="Passphrase" autocomplete="off" />
+    <button id="gate-submit">View Dashboard</button>
+    <div id="gate-error">Incorrect passphrase.</div>
+  </div>
+</div>
 
 <div class="page">
   <header>
@@ -347,6 +422,33 @@
 </div>
 
 <script>
+  // Casual speed-bump only, not real security (page source + data.json are still directly fetchable). Change this to whatever you want.
+  const VIEW_PASSPHRASE = "superside-status-26";
+
+  function unlockGate() {
+    document.getElementById("gate").style.display = "none";
+    document.querySelector(".page").style.display = "block";
+  }
+
+  if (localStorage.getItem("dashboardViewUnlocked") === "1") {
+    unlockGate();
+  } else {
+    document.getElementById("gate-submit").addEventListener("click", checkGatePassphrase);
+    document.getElementById("gate-input").addEventListener("keydown", (e) => {
+      if (e.key === "Enter") checkGatePassphrase();
+    });
+  }
+
+  function checkGatePassphrase() {
+    const val = document.getElementById("gate-input").value;
+    if (val === VIEW_PASSPHRASE) {
+      localStorage.setItem("dashboardViewUnlocked", "1");
+      unlockGate();
+    } else {
+      document.getElementById("gate-error").style.display = "block";
+    }
+  }
+
   const STATUS_ORDER = [
     "Project Not Started",
     "In Progress",
