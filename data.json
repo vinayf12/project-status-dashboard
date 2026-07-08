@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-07-08T00:00:00Z",
+  "updated_at": "2026-07-08T06:21:23Z",
   "projects": [
     {
       "project_number": "224533",
       "channel_name": "wex10-4-224533-cont-203818-10-4newclaims-paid",
       "display_name": "Wex — New Claims Paid",
-      "status": "In Progress",
-      "note": "Client requested a new video option (billboard split); team actively iterating on concepts, no delivery finalized yet.",
+      "status": "Waiting for Feedback",
+      "note": "Client asked to test a new 'Billboard Split' video option (AI-generated billboard); team proposed solution and is awaiting client reply.",
       "last_activity": "2026-07-08"
     },
     {
@@ -14,7 +14,7 @@
       "channel_name": "strava-279324-sskuwinbackjourney-creativeresourcing",
       "display_name": "Strava — SSKU Winback Journey",
       "status": "In Progress",
-      "note": "PM confirmed all feedback added to EXT; team starting new draft (V2).",
+      "note": "All V1 feedback added to EXT and tasks created in Asana; team now working on V2 draft.",
       "last_activity": "2026-07-08"
     },
     {
@@ -22,7 +22,7 @@
       "channel_name": "strava-269357-whatsnewmaycarousel",
       "display_name": "Strava — What's New May Carousel",
       "status": "Waiting for Feedback",
-      "note": "Creative Delivery 2 sent 2026-07-06; client feedback on V2 is overdue as of today.",
+      "note": "Creative Delivery 2 sent 2026-07-06; Client Feedback Due - V2 milestone now overdue as of today.",
       "last_activity": "2026-07-08"
     },
     {
@@ -30,7 +30,7 @@
       "channel_name": "mitsubishi-218254-mitsubishipowerkeyvisual",
       "display_name": "Mitsubishi — Power Key Visual",
       "status": "Sent to Client",
-      "note": "KV Presentation V2 sent for customer review; awaiting response.",
+      "note": "KV Presentation V2 (updated PPTX draft) sent to customer for review on 2026-07-07; awaiting response.",
       "last_activity": "2026-07-07"
     },
     {
@@ -38,7 +38,7 @@
       "channel_name": "oysterhr-i-199961-brandassetlibrary",
       "display_name": "OysterHR — Brand Asset Library",
       "status": "Waiting for Feedback",
-      "note": "AM says customer is reviewing in detail and will debrief once ready.",
+      "note": "Customer happy with initial setup and reviewing in detail; will debrief Superside once ready.",
       "last_activity": "2026-07-07"
     },
     {
@@ -46,15 +46,15 @@
       "channel_name": "strava-256899-juneorganicsocialcarousels",
       "display_name": "Strava — June Organic Social Carousels",
       "status": "Sent to Client",
-      "note": "Creative Delivery 3 (final copy/designs) sent to customer.",
+      "note": "Creative Delivery 3 (final copy/designs) sent to customer 2026-07-07.",
       "last_activity": "2026-07-07"
     },
     {
       "project_number": "234532",
       "channel_name": "tomtom-234532-lifestyleimagesfortomtomcommunity",
       "display_name": "TomTom — Lifestyle Images for Community",
-      "status": "Blocked",
-      "note": "Paused until team member returns from PTO on Wed, July 8.",
+      "status": "Waiting for Feedback",
+      "note": "V5 suggested-edits deck sent to customer 2026-07-06; awaiting client feedback, paused pending Brittney's return from PTO on July 8.",
       "last_activity": "2026-07-06"
     },
     {
@@ -62,7 +62,7 @@
       "channel_name": "lucidmotor-252603-bookademopaidads",
       "display_name": "Lucid Motors — Book a Demo Paid Ads",
       "status": "Waiting for Feedback",
-      "note": "Asset sent for customer review on 6/18; still awaiting client response.",
+      "note": "Asset sent for customer review on 6/18; still no client response, team following up internally.",
       "last_activity": "2026-06-30"
     },
     {
@@ -70,7 +70,7 @@
       "channel_name": "lucidmotor-252620-generalawarenesspaidads",
       "display_name": "Lucid Motors — General Awareness Paid Ads",
       "status": "Waiting for Feedback",
-      "note": "No response from client yet since asset sent 6/19.",
+      "note": "No response from client yet since asset sent 6/19; team checked in again 7/6 with no reply.",
       "last_activity": "2026-07-06"
     },
     {
@@ -86,7 +86,7 @@
       "channel_name": "dynaparcor-201583-spt-tracmileproductlaunchimageassets",
       "display_name": "Dynapar — Product Launch Image Assets",
       "status": "Blocked",
-      "note": "On hold until mid-to-late July per PM.",
+      "note": "On hold until mid-to-late July per PM; PM confirmed OOO through July 13 with coverage in place.",
       "last_activity": "2026-06-30"
     },
     {
@@ -102,7 +102,7 @@
       "channel_name": "200404-dev-avetta-email-design-system",
       "display_name": "Avetta — Email Design System (Dev)",
       "status": "In Progress",
-      "note": "Ongoing dev/support channel; General Questions thread active as recently as yesterday.",
+      "note": "Ongoing dev/support channel; template partition access restored and Outlook fix template updated, general Q&A thread active as of 2026-07-07.",
       "last_activity": "2026-07-07"
     },
     {
