@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-08T07:42:27Z",
+  "updated_at": "2026-07-08T08:49:50Z",
   "projects": [
     {
       "project_number": "224533",
@@ -17,7 +17,7 @@
       "channel_name": "strava-279324-sskuwinbackjourney-creativeresourcing",
       "display_name": "Strava — SSKU Winback Journey",
       "status": "In Progress",
-      "note": "V1 delivered 7/3; client feedback logged into EXT/Asana today (7/8) with explicit same-day acknowledgment that V2 work has started, V2 draft due 7/8-7/9.",
+      "note": "Per Asana: Creative Delivery 2 due today 7/8 1pm MST, Strava Feedback 2 checkpoint tomorrow 7/9 — team is finishing V2 to hit today's delivery deadline, on schedule.",
       "last_activity": "2026-07-08",
       "team": ["Amori", "Vinay", "Danielle", "Estefania"]
     },
@@ -27,8 +27,8 @@
       "channel_name": "strava-269357-whatsnewmaycarousel",
       "display_name": "Strava — What's New May Carousel",
       "status": "Waiting for Feedback",
-      "note": "Creative Delivery 2 genuinely sent 7/6 (confirmed by ops-bot + team), following real design iteration 7/1-7/3; feedback milestone only became overdue this morning, ~2 days of silence.",
-      "last_activity": "2026-07-06",
+      "note": "Per Asana: V2 delivered 7/7, Client Feedback Due - V2 task is due today (7/8) — NOT overdue, on schedule. (Correction: Slack's milestone-bot phrasing earlier misread as 'overdue'.)",
+      "last_activity": "2026-07-07",
       "team": ["Amori", "Vinay", "Danielle", "Estefania"]
     },
     {
@@ -57,7 +57,7 @@
       "channel_name": "strava-256899-juneorganicsocialcarousels",
       "display_name": "Strava — June Organic Social Carousels",
       "status": "Waiting for Feedback",
-      "note": "Creative Delivery 3 (final copy + designs) sent to customer 7/7, following a full day of active design/copy finalization the same day.",
+      "note": "Creative Delivery 3 (final copy + designs) sent to customer 7/7; confirmed in Asana (V3 Delivery task due 7/7, CR stages completed same day). Part of a larger 5-week/14-carousel evergreen workstream, still 14 tasks open overall.",
       "last_activity": "2026-07-07",
       "team": ["Amori", "Vinay", "Danielle", "Estefania"]
     },
