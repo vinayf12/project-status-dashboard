@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-08T08:49:50Z",
+  "updated_at": "2026-07-08T14:51:16Z",
   "projects": [
     {
       "project_number": "224533",
@@ -7,7 +7,7 @@
       "channel_name": "wex10-4-224533-cont-203818-10-4newclaims-paid",
       "display_name": "Wex — New Claims Paid",
       "status": "In Progress",
-      "note": "Client asked to test a new 'Billboard Split' video option same-day (7/8); team is still internally discussing execution approach — nothing sent to client yet.",
+      "note": "Client came back asking to test a 'Billboard Split' treatment; team is actively working execution approach in a live thread (5 replies) as of 7/8, building on the 7/2 approved asset — real back-and-forth continuing.",
       "last_activity": "2026-07-08",
       "team": [
         "Juan",
@@ -22,7 +22,7 @@
       "channel_name": "strava-279324-sskuwinbackjourney-creativeresourcing",
       "display_name": "Strava — SSKU Winback Journey",
       "status": "In Progress",
-      "note": "Per Asana: Creative Delivery 2 due today 7/8 1pm MST, Strava Feedback 2 checkpoint tomorrow 7/9 — team is finishing V2 to hit today's delivery deadline, on schedule.",
+      "note": "Client feedback on V1 came in 7/8 (all comments added to EXT per Maria); team is now actively building V2 IR Design/Copy tonight (Asana tasks overdue since 1pm UTC but actively being worked, per Amori/Claire 7/8 evening updates).",
       "last_activity": "2026-07-08",
       "team": [
         "Amori",
@@ -37,7 +37,7 @@
       "channel_name": "strava-269357-whatsnewmaycarousel",
       "display_name": "Strava — What's New May Carousel",
       "status": "Waiting for Feedback",
-      "note": "Per Asana: V2 delivered 7/7, Client Feedback Due - V2 task is due today (7/8) — NOT overdue, on schedule. (Correction: Slack's milestone-bot phrasing earlier misread as 'overdue'.)",
+      "note": "Per Asana: V2 delivered 7/7, Client Feedback Due - V2 due today 7/8 — on schedule, not stalled. Team has already scheduled the next round (F1 prep/QC/delivery 7/9-7/10) in anticipation of feedback.",
       "last_activity": "2026-07-07",
       "team": [
         "Amori",
@@ -67,8 +67,8 @@
       "channel_name": "oysterhr-i-199961-brandassetlibrary",
       "display_name": "OysterHR — Brand Asset Library",
       "status": "Waiting for Feedback",
-      "note": "New draft delivered 7/3 after real work 6/29-7/3; customer confirmed reviewing in detail as of 7/7. Watch closely — this project has a history of 2.5-month stalls hidden behind similar vague 'awaiting feedback' notes.",
-      "last_activity": "2026-07-03",
+      "note": "New draft delivered 7/3 after real work 6/29-7/3; customer confirmed 7/7 he's happy with the initial setup and reviewing in detail before debriefing Superside. Watch closely — this project has a history of 2.5-month stalls hidden behind similar vague 'awaiting feedback' notes.",
+      "last_activity": "2026-07-07",
       "team": [
         "Amori",
         "Vinay",
@@ -82,7 +82,7 @@
       "channel_name": "strava-256899-juneorganicsocialcarousels",
       "display_name": "Strava — June Organic Social Carousels",
       "status": "Waiting for Feedback",
-      "note": "Creative Delivery 3 (final copy + designs) sent to customer 7/7; confirmed in Asana (V3 Delivery task due 7/7, CR stages completed same day). Part of a larger 5-week/14-carousel evergreen workstream, still 14 tasks open overall.",
+      "note": "Creative Delivery 3 (final copy + designs) sent to customer 7/7 22:54; V3 Delivery task in Asana still shows unchecked (checkbox-hygiene lag) but Slack confirms the real delivery happened same day. Part of a larger 5-week/14-carousel evergreen workstream.",
       "last_activity": "2026-07-07",
       "team": [
         "Amori",
@@ -96,9 +96,9 @@
       "channel_id": "C0B1P9QG830",
       "channel_name": "tomtom-234532-lifestyleimagesfortomtomcommunity",
       "display_name": "TomTom — Lifestyle Images for Community",
-      "status": "Waiting for Feedback",
-      "note": "V5 suggested-edits deck sent to customer 7/6 after two days of intensive real design iteration and a live customer review call; feedback expected today.",
-      "last_activity": "2026-07-06",
+      "status": "In Progress",
+      "note": "Client gave live feedback on a call 7/8 (recording + notes shared by Bradley); team is now actively actioning the changes with new IR1/IR2/CR milestones set for 7/9-7/13 — momentum shifted from waiting to executing.",
+      "last_activity": "2026-07-08",
       "team": [
         "Windy",
         "Vinay",
