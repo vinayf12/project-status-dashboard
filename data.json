@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-08T06:50:46Z",
+  "updated_at": "2026-07-08T07:20:00Z",
   "projects": [
     {
       "project_number": "224533",
@@ -7,7 +7,7 @@
       "channel_name": "wex10-4-224533-cont-203818-10-4newclaims-paid",
       "display_name": "Wex — New Claims Paid",
       "status": "Waiting for Feedback",
-      "note": "Client asked to test a new 'Billboard Split' video option (AI-generated billboard); team proposed solution and is awaiting client reply.",
+      "note": "Client asked to test a new 'Billboard Split' video option (AI-generated billboard); team proposed a solution and sent it over, awaiting client reply.",
       "last_activity": "2026-07-08",
       "team": ["Juan", "Vinay", "Angelica", "Leonardo"]
     },
@@ -17,7 +17,7 @@
       "channel_name": "strava-279324-sskuwinbackjourney-creativeresourcing",
       "display_name": "Strava — SSKU Winback Journey",
       "status": "In Progress",
-      "note": "All V1 feedback added to EXT and tasks created in Asana; team now working on V2 draft.",
+      "note": "All V1 feedback added to EXT and tasks created in Asana; team actively working on V2 draft.",
       "last_activity": "2026-07-08",
       "team": ["Amori", "Vinay", "Danielle", "Estefania"]
     },
@@ -27,7 +27,7 @@
       "channel_name": "strava-269357-whatsnewmaycarousel",
       "display_name": "Strava — What's New May Carousel",
       "status": "Waiting for Feedback",
-      "note": "Creative Delivery 2 sent 2026-07-06; Client Feedback Due - V2 milestone now overdue as of today.",
+      "note": "Creative Delivery 2 sent 2026-07-06; feedback milestone is overdue as of today but it's only been 2 days — not yet stale.",
       "last_activity": "2026-07-08",
       "team": ["Amori", "Vinay", "Danielle", "Estefania"]
     },
@@ -36,7 +36,7 @@
       "channel_id": "C0ASNGC7AUV",
       "channel_name": "mitsubishi-218254-mitsubishipowerkeyvisual",
       "display_name": "Mitsubishi — Power Key Visual",
-      "status": "Sent to Client",
+      "status": "Waiting for Feedback",
       "note": "KV Presentation V2 (updated PPTX draft) sent to customer for review on 2026-07-07; awaiting response.",
       "last_activity": "2026-07-07",
       "team": ["Windy", "Vinay", "Estefania", "Sam"]
@@ -56,8 +56,8 @@
       "channel_id": "C0B98MTJWNL",
       "channel_name": "strava-256899-juneorganicsocialcarousels",
       "display_name": "Strava — June Organic Social Carousels",
-      "status": "Sent to Client",
-      "note": "Creative Delivery 3 (final copy/designs) sent to customer 2026-07-07.",
+      "status": "Waiting for Feedback",
+      "note": "Creative Delivery 3 (final copy/designs) sent to customer 2026-07-07; awaiting sign-off.",
       "last_activity": "2026-07-07",
       "team": ["Amori", "Vinay", "Danielle", "Estefania"]
     },
@@ -67,7 +67,7 @@
       "channel_name": "tomtom-234532-lifestyleimagesfortomtomcommunity",
       "display_name": "TomTom — Lifestyle Images for Community",
       "status": "Waiting for Feedback",
-      "note": "V5 suggested-edits deck sent to customer 2026-07-06; awaiting client feedback, paused pending Brittney's return from PTO on July 8.",
+      "note": "V5 suggested-edits deck sent to customer 2026-07-06; awaiting client feedback. Team lead was briefly on PTO but coverage was in place — not the reason for the wait.",
       "last_activity": "2026-07-06",
       "team": ["Windy", "Vinay", "Estefania", "Margot"]
     },
@@ -76,8 +76,8 @@
       "channel_id": "C0B6AL0T10T",
       "channel_name": "lucidmotor-252603-bookademopaidads",
       "display_name": "Lucid Motors — Book a Demo Paid Ads",
-      "status": "Waiting for Feedback",
-      "note": "Asset sent for customer review on 6/18; still no client response, team following up internally.",
+      "status": "Stale",
+      "note": "Asset sent for customer review on 6/18 — 3 weeks with zero client response despite internal follow-ups.",
       "last_activity": "2026-06-30",
       "team": ["Vinay", "Chris", "Stefany", "Karen"]
     },
@@ -86,8 +86,8 @@
       "channel_id": "C0B6N73FTJQ",
       "channel_name": "lucidmotor-252620-generalawarenesspaidads",
       "display_name": "Lucid Motors — General Awareness Paid Ads",
-      "status": "Waiting for Feedback",
-      "note": "No response from client yet since asset sent 6/19; team checked in again 7/6 with no reply.",
+      "status": "Stale",
+      "note": "No response from client since asset sent 6/19; team checked in again 7/6 with no reply — going cold.",
       "last_activity": "2026-07-06",
       "team": ["Vinay", "Chris", "Stefany", "Karen"]
     },
@@ -96,7 +96,7 @@
       "channel_id": "C0ASN7HBCGL",
       "channel_name": "oysterhr-i-217434-brandiconrefresh",
       "display_name": "OysterHR — Brand Icon Refresh",
-      "status": "To Do",
+      "status": "Project Not Started",
       "note": "Waiting on customer to brief Superside — work not yet started.",
       "last_activity": "2026-06-05",
       "team": ["Amori", "Vinay", "Stefany", "Pablo"]
@@ -106,20 +106,10 @@
       "channel_id": "C0A9FJ9J3NX",
       "channel_name": "dynaparcor-201583-spt-tracmileproductlaunchimageassets",
       "display_name": "Dynapar — Product Launch Image Assets",
-      "status": "Blocked",
-      "note": "On hold until mid-to-late July per PM; PM confirmed OOO through July 13 with coverage in place.",
+      "status": "In Progress",
+      "note": "Deliberately on hold until mid-to-late July per PM; PM briefly OOO but coverage is in place, still an owned/active project.",
       "last_activity": "2026-06-30",
       "team": ["Amori", "Vinay", "Benitta", "Franco"]
-    },
-    {
-      "project_number": "199342",
-      "channel_id": "C0A6V7AHKND",
-      "channel_name": "ext-retouching-199342-dick-sspor",
-      "display_name": "Dick's Sporting Goods — Retouching",
-      "status": "Done",
-      "note": "All SKUs shared and files delivered to client; Q1 batch wrapped.",
-      "last_activity": "2026-06-22",
-      "team": ["Windy", "Bernard", "Isadriana", "Alex"]
     },
     {
       "project_number": "200404",

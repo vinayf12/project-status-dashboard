@@ -14,13 +14,10 @@
     --glass: rgba(255, 255, 255, 0.5);
     --glass-strong: rgba(255, 255, 255, 0.68);
     --glass-border: rgba(255, 255, 255, 0.65);
-    --todo: #94a3b8;
-    --progress: #6366f1;
-    --sent: #a855f7;
+    --not-started: #94a3b8;
+    --in-progress: #6366f1;
     --waiting: #f59e0b;
-    --blocked: #f43f5e;
-    --done: #10b981;
-    --unclear: #9ca3af;
+    --stale: #ef4444;
   }
   * { box-sizing: border-box; }
   html, body {
@@ -250,23 +247,17 @@
 
 <script>
   const STATUS_ORDER = [
-    "To Do",
+    "Project Not Started",
     "In Progress",
-    "Sent to Client",
     "Waiting for Feedback",
-    "Blocked",
-    "Done",
-    "Unclear",
+    "Stale",
   ];
 
   const STATUS_COLOR = {
-    "To Do": "var(--todo)",
-    "In Progress": "var(--progress)",
-    "Sent to Client": "var(--sent)",
+    "Project Not Started": "var(--not-started)",
+    "In Progress": "var(--in-progress)",
     "Waiting for Feedback": "var(--waiting)",
-    "Blocked": "var(--blocked)",
-    "Done": "var(--done)",
-    "Unclear": "var(--unclear)",
+    "Stale": "var(--stale)",
   };
 
   const SLACK_ICON = `<svg viewBox="0 0 122.8 122.8" xmlns="http://www.w3.org/2000/svg">
@@ -303,7 +294,7 @@
     const byStatus = {};
     STATUS_ORDER.forEach((s) => (byStatus[s] = []));
     projects.forEach((p) => {
-      const s = STATUS_ORDER.includes(p.status) ? p.status : "Unclear";
+      const s = STATUS_ORDER.includes(p.status) ? p.status : "Project Not Started";
       byStatus[s].push(p);
     });
 
