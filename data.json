@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-08T07:35:00Z",
+  "updated_at": "2026-07-08T07:50:00Z",
   "projects": [
     {
       "project_number": "224533",
@@ -67,7 +67,7 @@
       "channel_name": "tomtom-234532-lifestyleimagesfortomtomcommunity",
       "display_name": "TomTom — Lifestyle Images for Community",
       "status": "Waiting for Feedback",
-      "note": "V5 suggested-edits deck sent to customer 2026-07-06; awaiting client feedback. Team lead was briefly on PTO but coverage was in place — not the reason for the wait.",
+      "note": "V5 suggested-edits deck sent to customer 2026-07-06; awaiting client feedback.",
       "last_activity": "2026-07-06",
       "team": ["Windy", "Vinay", "Estefania", "Margot"]
     },
@@ -106,8 +106,8 @@
       "channel_id": "C0A9FJ9J3NX",
       "channel_name": "dynaparcor-201583-spt-tracmileproductlaunchimageassets",
       "display_name": "Dynapar — Product Launch Image Assets",
-      "status": "In Progress",
-      "note": "Deliberately on hold until mid-to-late July per PM; PM briefly OOO but coverage is in place, still an owned/active project.",
+      "status": "Stale",
+      "note": "No real work or client contact since D1 was sent 2026-02-20 (~4.5 months); only activity since is two internal PTO/on-hold announcements, most recently pushing it to mid-late July.",
       "last_activity": "2026-06-30",
       "team": ["Amori", "Vinay", "Benitta", "Franco"]
     }
