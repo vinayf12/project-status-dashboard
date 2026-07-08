@@ -9,7 +9,13 @@
       "status": "In Progress",
       "note": "Client asked to test a new 'Billboard Split' video option same-day (7/8); team is still internally discussing execution approach — nothing sent to client yet.",
       "last_activity": "2026-07-08",
-      "team": ["Juan", "Vinay", "Angelica", "Leonardo"]
+      "team": [
+        "Juan",
+        "Vinay",
+        "Angelica",
+        "Leonardo"
+      ],
+      "manual_note": "test note from verification"
     },
     {
       "project_number": "279324",
@@ -19,7 +25,12 @@
       "status": "In Progress",
       "note": "Per Asana: Creative Delivery 2 due today 7/8 1pm MST, Strava Feedback 2 checkpoint tomorrow 7/9 — team is finishing V2 to hit today's delivery deadline, on schedule.",
       "last_activity": "2026-07-08",
-      "team": ["Amori", "Vinay", "Danielle", "Estefania"]
+      "team": [
+        "Amori",
+        "Vinay",
+        "Danielle",
+        "Estefania"
+      ]
     },
     {
       "project_number": "269357",
@@ -29,7 +40,12 @@
       "status": "Waiting for Feedback",
       "note": "Per Asana: V2 delivered 7/7, Client Feedback Due - V2 task is due today (7/8) — NOT overdue, on schedule. (Correction: Slack's milestone-bot phrasing earlier misread as 'overdue'.)",
       "last_activity": "2026-07-07",
-      "team": ["Amori", "Vinay", "Danielle", "Estefania"]
+      "team": [
+        "Amori",
+        "Vinay",
+        "Danielle",
+        "Estefania"
+      ]
     },
     {
       "project_number": "218254",
@@ -39,7 +55,12 @@
       "status": "Waiting for Feedback",
       "note": "KV Presentation V2 formally sent to customer review 7/7, capping a week of continuous active design work (Figma iterations 7/1-7/7); awaiting response.",
       "last_activity": "2026-07-07",
-      "team": ["Windy", "Vinay", "Estefania", "Sam"]
+      "team": [
+        "Windy",
+        "Vinay",
+        "Estefania",
+        "Sam"
+      ]
     },
     {
       "project_number": "199961",
@@ -49,7 +70,12 @@
       "status": "Waiting for Feedback",
       "note": "New draft delivered 7/3 after real work 6/29-7/3; customer confirmed reviewing in detail as of 7/7. Watch closely — this project has a history of 2.5-month stalls hidden behind similar vague 'awaiting feedback' notes.",
       "last_activity": "2026-07-03",
-      "team": ["Amori", "Vinay", "Pablo", "Maria"]
+      "team": [
+        "Amori",
+        "Vinay",
+        "Pablo",
+        "Maria"
+      ]
     },
     {
       "project_number": "256899",
@@ -59,7 +85,12 @@
       "status": "Waiting for Feedback",
       "note": "Creative Delivery 3 (final copy + designs) sent to customer 7/7; confirmed in Asana (V3 Delivery task due 7/7, CR stages completed same day). Part of a larger 5-week/14-carousel evergreen workstream, still 14 tasks open overall.",
       "last_activity": "2026-07-07",
-      "team": ["Amori", "Vinay", "Danielle", "Estefania"]
+      "team": [
+        "Amori",
+        "Vinay",
+        "Danielle",
+        "Estefania"
+      ]
     },
     {
       "project_number": "234532",
@@ -69,7 +100,12 @@
       "status": "Waiting for Feedback",
       "note": "V5 suggested-edits deck sent to customer 7/6 after two days of intensive real design iteration and a live customer review call; feedback expected today.",
       "last_activity": "2026-07-06",
-      "team": ["Windy", "Vinay", "Estefania", "Margot"]
+      "team": [
+        "Windy",
+        "Vinay",
+        "Estefania",
+        "Margot"
+      ]
     },
     {
       "project_number": "252603",
@@ -79,7 +115,12 @@
       "status": "Stale",
       "note": "Final assets sent for customer review 6/18; client cited layoffs on 6/23 and never followed up despite an internal check-in 6/30 — ~20 days of silence as of today.",
       "last_activity": "2026-06-30",
-      "team": ["Vinay", "Chris", "Stefany", "Karen"]
+      "team": [
+        "Vinay",
+        "Chris",
+        "Stefany",
+        "Karen"
+      ]
     },
     {
       "project_number": "252620",
@@ -89,7 +130,12 @@
       "status": "Stale",
       "note": "Assets sent for customer review 6/19; client cited layoffs 6/23 and promised feedback by EOW but never delivered — team confirmed 7/6 still no reply, ~19 days of silence.",
       "last_activity": "2026-07-06",
-      "team": ["Vinay", "Chris", "Stefany", "Karen"]
+      "team": [
+        "Vinay",
+        "Chris",
+        "Stefany",
+        "Karen"
+      ]
     },
     {
       "project_number": "217434",
@@ -99,7 +145,12 @@
       "status": "Project Not Started",
       "note": "Only two messages ever in this channel (4/17 and 6/5), both confirming nothing is actionable pending the customer's brief — no scoping or drafts have occurred.",
       "last_activity": "2026-06-05",
-      "team": ["Amori", "Vinay", "Stefany", "Pablo"]
+      "team": [
+        "Amori",
+        "Vinay",
+        "Stefany",
+        "Pablo"
+      ]
     },
     {
       "project_number": "201583",
@@ -109,7 +160,12 @@
       "status": "Stale",
       "note": "No real work or client contact since D1 was sent 2026-02-20 (~4.5 months); only activity since is two internal PTO/on-hold announcements, most recently pushing it to mid-late July.",
       "last_activity": "2026-06-30",
-      "team": ["Amori", "Vinay", "Benitta", "Franco"]
+      "team": [
+        "Amori",
+        "Vinay",
+        "Benitta",
+        "Franco"
+      ]
     }
   ]
 }
