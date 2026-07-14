@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-14T07:45:59Z",
+  "updated_at": "2026-07-14T14:45:49Z",
   "projects": [
     {
       "project_number": "224533",
@@ -27,11 +27,11 @@
       "channel_name": "strava-279324-sskuwinbackjourney-creativeresourcing",
       "display_name": "Strava — SSKU Winback Journey",
       "status": "In Progress",
-      "note": "Round-2 feedback is in; building the final delivery (CD3).",
+      "note": "Feedback implemented; exporting assets for final delivery (CD3).",
       "details": [
-        "Client design comments (Jess) + copy confirmations (Sydney) received",
-        "Vinay implementing feedback 7/14",
-        "Asana: V3 IR due 7/14, CR + Final Files due 7/15"
+        "Copy approved 7/14; moved to EXT for final delivery",
+        "Vinay exported Desktop/Mobile 2x + icons 4x; Amori updated exports 7/14",
+        "Asana: V3 IR overdue (due 7/14), V3 CR + Final Files due 7/15"
       ],
       "last_activity": "2026-07-14",
       "team": [
@@ -105,11 +105,11 @@
       "channel_name": "strava-256899-juneorganicsocialcarousels",
       "display_name": "Strava — June Organic Social Carousels",
       "status": "In Progress",
-      "note": "Feedback in; actively exporting and in production.",
+      "note": "Feedback in; approved exports sent, World Cup post in production.",
       "details": [
-        "Exports for first 6 carousel categories sent 7/14",
-        "World Cup post Delivery 1 now in production",
-        "Asana: World Cup CR due 7/15, delivery ~7/16"
+        "6 approved carousel exports sent to client 7/14",
+        "Types of Lifter carousel ready for review 7/14",
+        "Asana: World Cup IR overdue (due 7/14), CR due 7/15"
       ],
       "last_activity": "2026-07-14",
       "team": [
