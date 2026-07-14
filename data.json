@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-10T05:00:10Z",
+  "updated_at": "2026-07-14T07:45:59Z",
   "projects": [
     {
       "project_number": "224533",
@@ -7,8 +7,8 @@
       "channel_name": "wex10-4-224533-cont-203818-10-4newclaims-paid",
       "display_name": "Wex — New Claims Paid",
       "status": "In Progress",
-      "note": "Client requested a new 'Billboard Split' treatment (7/8); team pulled in an AI creative (Diego Triana) to help execute it, and a live thread with technical discussion (rotoscoping approach, asset repository, IR timeline) continued into the early hours of 7/10 — real, active work ongoing.",
-      "last_activity": "2026-07-10",
+      "note": "Active AI video work continuing: after the client-requested 'Billboard Split' treatment, Diego Triana built corrected billboard scenes for the storyboard (7/10) and Bianca reviewed the billboard inserts 7/13 ('look perfect') with only minor notes on one distorted shot; Leonardo back from PTO 7/13. Real, ongoing execution.",
+      "last_activity": "2026-07-13",
       "team": [
         "Juan",
         "Vinay",
@@ -22,9 +22,9 @@
       "channel_id": "C0BF1EEPSG0",
       "channel_name": "strava-279324-sskuwinbackjourney-creativeresourcing",
       "display_name": "Strava — SSKU Winback Journey",
-      "status": "Waiting for Feedback",
-      "note": "Creative Delivery 2 was sent to the customer 7/9 evening (per Asana project notes, roughly on the planned CD2/Feedback-2 timeline); Asana's 'V2 Delivery' and 'Client Feedback Due - V2' tasks still show incomplete/overdue but Slack confirms the real delivery happened — checkbox-hygiene lag. Team now awaits Strava's round-2 feedback before CD3, due 7/13 per Asana.",
-      "last_activity": "2026-07-09",
+      "status": "In Progress",
+      "note": "Round-2 feedback has come back in (client design comments from Jess + copy confirmations from Sydney); team is now actively building the final Creative Delivery 3 and final files, with Vinay implementing feedback 7/14. Asana (confirmed match, Ongoing) shows V3 IR due 7/14 and V3 CR + Final Files due 7/15 — an active delivery push, no longer just awaiting feedback.",
+      "last_activity": "2026-07-14",
       "team": [
         "Amori",
         "Vinay",
@@ -38,7 +38,7 @@
       "channel_name": "strava-269357-whatsnewmaycarousel",
       "display_name": "Strava — What's New May Carousel",
       "status": "Waiting for Feedback",
-      "note": "F1 (Creative Delivery 3 + Google exports) sent to customer 7/9 evening; Asana shows Client Approval Due - F1 on 7/13 — on schedule, not stalled.",
+      "note": "F1 (Creative Delivery 3 + Google exports) sent to customer 7/9; Asana 'Client Approval Due - F1' was due 7/13 and is now ~1 day overdue with no client reply as of 7/14 — still awaiting approval, short delay only, not stale.",
       "last_activity": "2026-07-09",
       "team": [
         "Amori",
@@ -53,7 +53,7 @@
       "channel_name": "mitsubishi-218254-mitsubishipowerkeyvisual",
       "display_name": "Mitsubishi — Power Key Visual",
       "status": "Waiting for Feedback",
-      "note": "KV Presentation V2 formally sent to customer review 7/7, capping a week of continuous active design work (Figma iterations 7/1-7/7); awaiting response, no client reply yet as of 7/9.",
+      "note": "KV Presentation V2 formally sent to customer review 7/7, capping a week of continuous design work (Figma iterations 7/1-7/7); still no client feedback as of 7/14 (~1 week), team awaiting response.",
       "last_activity": "2026-07-07",
       "team": [
         "Windy",
@@ -82,9 +82,9 @@
       "channel_id": "C0B98MTJWNL",
       "channel_name": "strava-256899-juneorganicsocialcarousels",
       "display_name": "Strava — June Organic Social Carousels",
-      "status": "Waiting for Feedback",
-      "note": "CD3 sent to customer 7/7 evening; as of 7/9 team is still chasing the client for confirmation on which World Cup / Runner→Lifter posts to move into design — Claire flagged urgency since the World Cup final is 7/19. Part of a larger 5-week/14-carousel evergreen workstream.",
-      "last_activity": "2026-07-09",
+      "status": "In Progress",
+      "note": "Client feedback fully in; team actively implementing approved edits and exporting — exports for the first 6 carousel categories sent to customer 7/14, and World Cup post Delivery 1 now in production (Asana Ongoing; World Cup CR due 7/15, delivery ~7/16). Active production, no longer just awaiting feedback.",
+      "last_activity": "2026-07-14",
       "team": [
         "Amori",
         "Vinay",
@@ -98,8 +98,8 @@
       "channel_name": "tomtom-234532-lifestyleimagesfortomtomcommunity",
       "display_name": "TomTom — Lifestyle Images for Community",
       "status": "In Progress",
-      "note": "Following the 7/8 client call, team is deep in IR1 image-by-image iteration; Windy posted a detailed shot-by-shot recap (7/9 22:33) with several images still needing edits (ethnicity, color tone, seatbelt) — real, active back-and-forth continuing daily.",
-      "last_activity": "2026-07-09",
+      "note": "Client approved the final image selection (V6 sent 7/13) and the project moved into post-production/finals; Manuel Ruiz executing edits across two 10-image batches with IR/CR milestones set 7/15-7/17, Bradley pushing for speed. Active daily work.",
+      "last_activity": "2026-07-13",
       "team": [
         "Windy",
         "Vinay",
@@ -114,8 +114,8 @@
       "channel_name": "lucidmotor-252603-bookademopaidads",
       "display_name": "Lucid Motors — Book a Demo Paid Ads",
       "status": "Stale",
-      "note": "Final assets sent for customer review 6/18; client cited layoffs on 6/23 and never followed up despite an internal check-in 6/30 — no further Slack activity since, now ~3 weeks of client silence.",
-      "last_activity": "2026-06-30",
+      "note": "Final assets sent for customer review 6/18; client cited layoffs 6/23 and went silent. Team still chasing — Angeles posted 7/14 they're 'still waiting for feedback' — but ~4 weeks of client silence with no real progress.",
+      "last_activity": "2026-07-14",
       "team": [
         "Vinay",
         "Chris",
@@ -129,8 +129,8 @@
       "channel_name": "lucidmotor-252620-generalawarenesspaidads",
       "display_name": "Lucid Motors — General Awareness Paid Ads",
       "status": "Stale",
-      "note": "Assets sent for customer review 6/19; client cited layoffs 6/23 and promised feedback by EOW but never delivered. Chris checked in again 7/6 ('i'm assuming we havent heard back?') and Stefany confirmed 'Not yet' — client silence continuing, now ~2.5 weeks.",
-      "last_activity": "2026-07-06",
+      "note": "Assets sent for customer review 6/19; client cited layoffs 6/23. Team chased 7/6 (Chris) and again 7/14 (Angeles: 'still waiting for feedback') — no client response for ~3.5 weeks, no real progress.",
+      "last_activity": "2026-07-14",
       "team": [
         "Vinay",
         "Chris",
@@ -166,6 +166,21 @@
         "Vinay",
         "Benitta",
         "Franco"
+      ]
+    },
+    {
+      "project_number": "292674",
+      "channel_id": "C0BGWNGVCN9",
+      "channel_name": "strava-292674-garmin-remindmelater-retargeting-ftue-creativeresourcing",
+      "display_name": "Strava — Garmin Remind Me Later Retargeting FTUE",
+      "status": "Project Not Started",
+      "note": "New Strava retargeting project; channel created 7/13. Project plan shared with the client 7/14 but pending their confirmation — Maria noted there's nothing to execute yet. IR planned Thursday, CR Friday. Matching Asana project exists. No creative work started.",
+      "last_activity": "2026-07-14",
+      "team": [
+        "Maria",
+        "Vinay",
+        "Amori",
+        "Estefania"
       ]
     }
   ]
