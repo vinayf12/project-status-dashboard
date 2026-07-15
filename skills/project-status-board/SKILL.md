@@ -21,11 +21,16 @@ glanceable link.
 
 ## What you produce
 
-1. A `data.json` config + snapshot (source of truth).
+1. A `data.json` snapshot, built fresh in-session (no repo needed).
 2. A self-contained `out.html` (the board, data baked inline — works inside the
    Claude artifact sandbox, no network calls).
 3. A published **artifact** on a stable URL (same link on every refresh).
 4. (Optional) A ready-to-paste **Routine** prompt for twice-daily auto-refresh.
+
+**No repository required.** Everything runs from this skill's bundled files and
+the user's Slack/Asana connectors. Work in a scratch dir. (A *private* repo is
+only needed for the advanced Sync button — see the last section. Never use a
+public repo: these boards contain candid client notes.)
 
 Assets bundled with this skill (in `assets/`):
 - `template.html` — the board UI. Contains the placeholder `__DATA_JSON__`.
@@ -135,60 +140,70 @@ python3 assets/generate.py data.json assets/template.html out.html
 ## Step 6 — Publish the artifact (stable link)
 
 Publish `out.html` as an artifact.
-- **First time:** publish normally; save the returned artifact URL somewhere
-  durable (in `data.json` as a `_artifact_url` note, or tell the user to keep it).
-- **Every later refresh:** publish to that **same URL** so the link never
-  changes. Use title `"<owner> — Project Status"` and a stable favicon (📋).
+- **First time:** publish normally, then **give the user the returned artifact
+  URL and tell them to keep it** — it's the stable link they'll share, and the
+  Routine needs it to republish to the same place.
+- **Every later refresh:** publish to that **same URL** (pass it as `url=`) so the
+  link never changes — otherwise a NEW link is minted. Use title
+  `"<owner> — Project Status"` and a stable favicon (📋).
 
-## Step 7 (optional, tell the user it's advanced) — twice-daily auto-refresh
+## Step 7 (optional) — twice-daily auto-refresh, no repo
 
 The board can rebuild itself server-side, twice a day, with the user's computer
-off. This needs a **Routine** (a scheduled session) in the Claude Code web app —
-the skill can't create it, but hand the user this to paste:
+off. This needs a **Routine** (a scheduled session) in the Claude Code web app.
+Because this skill is installed on the user's account, the Routine can just call
+it — **no repository required.** The skill can't create the Routine, but hand the
+user this to set up:
 
-- Go to **claude.ai/code → Routines → New**, attach their repo (if any),
-  pick a cadence (e.g. cron `30 2,14 * * *` = 8:00 AM / 8:00 PM in GMT+5:30 —
-  convert to their zone: the field is read as UTC), and paste:
+- Go to **claude.ai/code → Routines → New**. No repo needed (or attach a private
+  one if they keep state there). Pick a cadence — the cron field is read as
+  **UTC**, so convert: e.g. `30 2,14 * * *` = 8:00 AM / 8:00 PM in GMT+5:30.
+  Paste this, filling in their artifact URL:
 
 ```
-Rebuild the project status board.
-1. Read data.json (and sync_request.json if present) for config + prior notes.
-2. Re-identify my projects: the Slack channels I'm a member of whose name
-   contains a 6-digit project number (format <client>-<NNNNNN>-<description>).
-   Add channels that are new, drop ones I've left.
-3. For each project: read its Slack channel + cross-check Asana, reclassify
-   status (Project Not Started / In Progress / Waiting for Feedback / Stale),
-   write a one-line note + 2-4 details bullets, last_activity, and the team.
-   Drop fully-completed projects and channels I've left (transient-error guarded).
-4. Write data.json with updated_at = current UTC time.
-5. Run: python3 assets/generate.py data.json assets/template.html out.html
-6. Publish out.html to the SAME existing artifact URL (do not create a new one).
+Use the project-status-board skill to rebuild my board and publish it to this
+EXISTING artifact URL (pass it as url= so the link never changes):
+<PASTE YOUR ARTIFACT URL>
+
+Re-discover my projects fresh from Slack each run (channels I'm in whose name is
+<client>-<6-digit number>-<description>); add new ones, drop channels I've left
+or projects that are fully completed (don't drop on a transient error).
 Read-only in Slack/Asana — never post.
 ```
 
-Verify one **Run now** succeeds before relying on it.
+Verify one **Run now** succeeds before relying on it. Keep any old local
+scheduled task as a fallback until the Routine has a green run.
 
 ---
 
 ## Advanced — the "⟳ Sync now" button (Cloudflare Worker)
 
 A button *inside* a Claude artifact can't make network calls, so an in-artifact
-"Sync" that anyone can click needs a tiny always-on service. If the user wants it:
+"Sync" that anyone can click needs a tiny always-on service. This tier is **not
+required** — skip it and the board still auto-refreshes on the Routine schedule;
+users just trigger ad-hoc refreshes by asking Claude to "sync my board."
 
-1. **Create a GitHub repo** to hold `data.json` + the board files.
+⚠️ **Privacy first:** these boards contain candid client notes. Use a **PRIVATE**
+repo, never public. And because GitHub Pages won't serve a private repo, the
+**Worker must serve the board itself** (don't rely on Pages).
+
+If the user still wants the button:
+
+1. **Create a PRIVATE GitHub repo** to hold `data.json` + the board files.
 2. **Deploy a Cloudflare Worker** (free tier) that:
-   - serves the board (`index.html`) and `data.json`, and
-   - exposes `POST /sync` — on hit, it writes/updates `sync_request.json`
-     (a `{ "requested_at": "<ISO>" }` file) in the repo via a stored GitHub
-     token (kept server-side in the Worker's secrets — never in the page).
-3. Add a live `index.html` (a `fetch`-based twin of the board) that, when opened
-   as `?sync=1`, POSTs to the Worker's `/sync` and shows a confirmation.
-4. Set `worker_url` in `data.json` to the Worker's URL and re-bake — the board
+   - **serves** the live board (`index.html`) and `data.json` directly (Worker
+     Static Assets — not GitHub Pages), and
+   - exposes `POST /sync` — on hit, writes/updates `sync_request.json`
+     (`{ "requested_at": "<ISO>" }`) in the repo via a GitHub token kept in the
+     Worker's secrets (server-side — never in the page).
+3. The live `index.html` is a `fetch`-based twin of the board that, when opened as
+   `?sync=1`, POSTs to `/sync` and shows a confirmation.
+4. Set `worker_url` in `data.json` to the Worker's URL and re-bake — the artifact
    now shows **⟳ Sync now**, linking to `<worker_url>/?sync=1`. Anyone with the
-   link can click it; it records a request that the routine picks up on its next
-   run. (For near-instant pickup, add a second routine every ~30 min using the
-   same prompt, guarded to only rebuild when `sync_request.json` is newer than
-   `data.json`.)
+   link can click it; it records a request the Routine picks up on its next run.
+   (For near-instant pickup, add a second Routine every ~30 min using the same
+   prompt, guarded to only rebuild when `sync_request.json` is newer than the
+   last publish.)
 
-This tier is optional. Without it, the board still auto-refreshes on the routine
-schedule; users just trigger ad-hoc refreshes by asking Claude to "sync the board."
+Note: leave `worker_url` empty and there is simply no button — the recommended
+default for anyone not running this infrastructure.
