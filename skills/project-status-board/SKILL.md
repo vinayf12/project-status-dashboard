@@ -1,8 +1,10 @@
 ---
 name: project-status-board
 description: >-
-  Build a self-updating kanban board of your active client projects, pulled from
-  your Slack project channels and cross-checked against Asana. Each project is
+  Build a self-updating kanban board of your active client projects. It
+  automatically finds your project channels (Slack channels you're in whose name
+  carries a 6-digit project number) and cross-checks Asana — no need to list them.
+  Each project is
   auto-classified (Not Started / In Progress / Waiting for Feedback / Stale) with
   a short summary, a few bullets, the team, last activity, and a link into its
   Slack channel — then published as a shareable Claude artifact on a stable link.
@@ -31,19 +33,51 @@ Assets bundled with this skill (in `assets/`):
 
 ---
 
-## Step 1 — Gather config (ask, don't assume)
+## Step 1 — Ask only what can't be discovered
 
-Ask the user for (or infer, then confirm):
+Ask the user for just two things:
 - **Owner name** — shown as the board title (e.g. "Jordan Lee").
-- **Projects to track** — either (a) they paste a list of Slack channels /
-  project numbers, or (b) find the client project channels they're active in via
-  Slack search and confirm the list with them. Don't guess silently.
 - **View passphrase** — a simple shared word for the gate (cosmetic only; tell
   them the page source + data are still readable by anyone with the link).
 
-## Step 2 — Scan each project (read-only)
+**Do NOT ask the user to list their projects.** Identify them automatically —
+see the next step.
 
-For EACH project, using the Slack and Asana connectors:
+## Step 2 — Identify the projects automatically (the naming format)
+
+Superside client project channels follow a consistent format:
+
+```
+<client>-<PROJECT_NUMBER>-<description>
+```
+
+- **`PROJECT_NUMBER`** is a **6-digit number** (e.g. `224533`) embedded in the
+  channel name. This is the reliable identifier — treat any Slack channel whose
+  name contains a 6-digit number as a client project.
+- **`<client>`** is the brand slug, sometimes with a suffix
+  (`wex10-4-…`, `oysterhr-i-…`, `lucidmotor-…`, `dynaparcor-…`).
+- **`<description>`** is the project name in slug form.
+
+To build the project list:
+1. Find the Slack channels the **current user is a member of** whose name matches
+   the pattern above (contains a 6-digit project number). Skip general/internal
+   channels (no project number) — e.g. #everyone-can-build, #general.
+2. For each, capture `channel_id`, `channel_name`, and the `project_number`
+   (the 6 digits).
+3. Derive a clean **`display_name`** = `"Client — Title Case Description"` using
+   judgment. Examples:
+   - `lucidmotor-252603-bookademopaidads` → `"Lucid Motors — Book a Demo Paid Ads"`
+   - `oysterhr-i-199961-brandassetlibrary` → `"OysterHR — Brand Asset Library"`
+   - `wex10-4-224533-cont-…-newclaims-paid` → `"Wex — New Claims Paid"`
+
+**Membership is the on/off switch:** if the user has left a channel, that project
+drops off the board. Re-discover on every refresh so new channels appear and old
+ones fall away automatically. (If the user *wants* to hand-pick or exclude a few,
+let them — but the default is auto-discovery, no list required.)
+
+## Step 3 — Scan each project (read-only)
+
+For EACH identified project, using the Slack and Asana connectors:
 - Read recent messages in its Slack channel (`slack_read_channel` by channel_id).
 - Cross-check the Asana milestones/tasks referenced for it (deadlines, overdue,
   approvals). The ops/automation posts in the channel usually mirror Asana.
@@ -57,7 +91,7 @@ For EACH project, using the Slack and Asana connectors:
   a `last_activity` date (YYYY-MM-DD), and the **team**.
 - **Never post** anything to Slack or Asana. Read only.
 
-## Step 3 — Write data.json
+## Step 4 — Write data.json
 
 ```json
 {
@@ -82,18 +116,18 @@ For EACH project, using the Slack and Asana connectors:
 ```
 Notes:
 - Leave `worker_url` empty unless the user set up the advanced Sync button
-  (Step 6). When empty, the board simply has no Sync button.
+  (see the advanced section). When empty, the board simply has no Sync button.
 - If a `manual_note` field exists on a project from a previous run, **preserve it
   verbatim** — never overwrite user notes.
 
-## Step 4 — Bake
+## Step 5 — Bake
 
 ```
 python3 assets/generate.py data.json assets/template.html out.html
 ```
 `generate.py` validates the JSON and injects it where `__DATA_JSON__` sits.
 
-## Step 5 — Publish the artifact (stable link)
+## Step 6 — Publish the artifact (stable link)
 
 Publish `out.html` as an artifact.
 - **First time:** publish normally; save the returned artifact URL somewhere
@@ -101,7 +135,7 @@ Publish `out.html` as an artifact.
 - **Every later refresh:** publish to that **same URL** so the link never
   changes. Use title `"<owner> — Project Status"` and a stable favicon (📋).
 
-## Step 6 (optional, tell the user it's advanced) — twice-daily auto-refresh
+## Step 7 (optional, tell the user it's advanced) — twice-daily auto-refresh
 
 The board can rebuild itself server-side, twice a day, with the user's computer
 off. This needs a **Routine** (a scheduled session) in the Claude Code web app —
@@ -113,14 +147,17 @@ the skill can't create it, but hand the user this to paste:
 
 ```
 Rebuild the project status board.
-1. Read data.json (and sync_request.json if present).
-2. For each project: read its Slack channel + cross-check Asana, reclassify
+1. Read data.json (and sync_request.json if present) for config + prior notes.
+2. Re-identify my projects: the Slack channels I'm a member of whose name
+   contains a 6-digit project number (format <client>-<NNNNNN>-<description>).
+   Add channels that are new, drop ones I've left.
+3. For each project: read its Slack channel + cross-check Asana, reclassify
    status (Project Not Started / In Progress / Waiting for Feedback / Stale),
-   write a one-line note + 2-4 bullets, last_activity, and keep the team.
+   write a one-line note + 2-4 bullets, last_activity, and the team.
    Preserve any existing manual_note field verbatim.
-3. Write data.json with updated_at = current UTC time.
-4. Run: python3 assets/generate.py data.json assets/template.html out.html
-5. Publish out.html to the SAME existing artifact URL (do not create a new one).
+4. Write data.json with updated_at = current UTC time.
+5. Run: python3 assets/generate.py data.json assets/template.html out.html
+6. Publish out.html to the SAME existing artifact URL (do not create a new one).
 Read-only in Slack/Asana — never post.
 ```
 
