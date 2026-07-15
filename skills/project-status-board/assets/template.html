@@ -1,0 +1,427 @@
+<title>Project Status Board</title>
+<style>
+  :root {
+    --text: #1c1f26;
+    --text-muted: #667085;
+    --glass: rgba(255, 255, 255, 0.5);
+    --glass-strong: rgba(255, 255, 255, 0.68);
+    --glass-border: rgba(255, 255, 255, 0.65);
+    --not-started: #94a3b8;
+    --in-progress: #6366f1;
+    --waiting: #f59e0b;
+    --stale: #ef4444;
+  }
+  * { box-sizing: border-box; }
+  html, body { min-height: 100%; }
+  body {
+    margin: 0;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: linear-gradient(180deg, #d6ecff 0%, #e3f3ea 45%, #f2f7ec 100%);
+    position: relative;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: -15%;
+    background:
+      radial-gradient(38% 28% at 18% 12%, rgba(255, 255, 255, 0.75), transparent 60%),
+      radial-gradient(36% 34% at 88% 8%, rgba(147, 197, 253, 0.55), transparent 60%),
+      radial-gradient(46% 42% at 78% 88%, rgba(167, 243, 208, 0.55), transparent 60%),
+      radial-gradient(34% 32% at 6% 82%, rgba(216, 180, 254, 0.45), transparent 60%),
+      radial-gradient(30% 26% at 50% 45%, rgba(253, 224, 171, 0.35), transparent 60%);
+    filter: blur(50px);
+    z-index: -2;
+    pointer-events: none;
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(100, 116, 139, 0.14) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(100, 116, 139, 0.14) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(circle at 50% 30%, rgba(0, 0, 0, 0.9), transparent 85%);
+    -webkit-mask-image: radial-gradient(circle at 50% 30%, rgba(0, 0, 0, 0.9), transparent 85%);
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px 24px 48px;
+    display: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 18px 26px;
+    background: var(--glass);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+    border: 1px solid var(--glass-border);
+    border-radius: 22px;
+    box-shadow: 0 10px 34px rgba(31, 41, 55, 0.07);
+  }
+  .brand h1 {
+    margin: 0 0 6px;
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 26px;
+    letter-spacing: -0.01em;
+  }
+  .brand p { margin: 0; color: var(--text-muted); font-size: 12.5px; }
+  #updated {
+    font-size: 12px;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 6px 12px;
+    border-radius: 999px;
+  }
+  .header-right { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .btn {
+    font: inherit;
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: var(--text);
+    box-shadow: 0 2px 8px rgba(31, 41, 55, 0.05);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(31, 41, 55, 0.1); }
+
+  .board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    align-items: flex-start;
+    padding-top: 22px;
+    padding-bottom: 12px;
+  }
+  .column { width: 280px; flex: 0 0 280px; margin-bottom: 12px; }
+  .column-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    padding: 6px 13px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(10px);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+  .count { color: var(--text-muted); font-weight: 500; }
+
+  .card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    border-radius: 18px;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 12px;
+    box-shadow: 0 8px 24px rgba(31, 41, 55, 0.06);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 16px 34px rgba(31, 41, 55, 0.12); }
+  .card-header { padding: 14px 16px 11px; }
+  .card-body {
+    padding: 13px 16px 15px;
+    background: rgba(17, 24, 39, 0.045);
+    box-shadow: inset 0 1px 3px rgba(17, 24, 39, 0.07);
+  }
+  .card-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+  .card-title { font-size: 13.5px; font-weight: 600; margin-bottom: 4px; line-height: 1.3; }
+  .slack-link {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 8px rgba(31, 41, 55, 0.06);
+    opacity: 0.85;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+  }
+  .slack-link:hover { opacity: 1; transform: scale(1.08); }
+  .slack-link svg { width: 13px; height: 13px; }
+  .card-number {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    margin-bottom: 8px;
+  }
+  .card-note { font-size: 12px; color: #374151; font-weight: 500; line-height: 1.45; margin-bottom: 8px; }
+  .card-details { margin: 0; padding-left: 15px; font-size: 11.5px; color: #4b5563; line-height: 1.4; }
+  .card-details li { margin-bottom: 3px; }
+  .card-footer {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(17, 24, 39, 0.08);
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+  .card-team { font-size: 10.5px; color: #9aa1ac; margin-top: 6px; }
+  .empty-col { font-size: 12px; color: var(--text-muted); font-style: italic; padding: 8px 4px; }
+
+  #gate {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #d6ecff 0%, #e3f3ea 45%, #f2f7ec 100%);
+  }
+  #gate-card {
+    width: 320px;
+    max-width: 88vw;
+    padding: 28px 26px;
+    background: var(--glass-strong);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(31, 41, 55, 0.12);
+    text-align: center;
+  }
+  #gate-card h2 {
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0 0 6px;
+  }
+  #gate-card p { margin: 0 0 16px; font-size: 12.5px; color: var(--text-muted); }
+  #gate-input {
+    width: 100%;
+    font: inherit;
+    font-size: 14px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  #gate-submit {
+    width: 100%;
+    font: inherit;
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: none;
+    background: #6366f1;
+    color: #fff;
+    cursor: pointer;
+  }
+  #gate-submit:focus-visible, #gate-input:focus-visible { outline: 2px solid #4f46e5; outline-offset: 2px; }
+  #gate-error { margin-top: 10px; font-size: 12px; color: #b91c1c; display: none; }
+</style>
+
+<div id="gate">
+  <div id="gate-card">
+    <h2 id="gate-name">Project Status</h2>
+    <p>Enter the passphrase your team shared with you</p>
+    <input id="gate-input" type="password" placeholder="Passphrase" autocomplete="off" />
+    <button id="gate-submit">View board</button>
+    <div id="gate-error">Incorrect passphrase.</div>
+  </div>
+</div>
+
+<div class="page">
+  <header>
+    <div class="brand">
+      <h1 id="brand-name">Project Status</h1>
+      <p>Status of active client projects, pulled from Slack &amp; Asana</p>
+    </div>
+    <div class="header-right">
+      <div id="updated"></div>
+    </div>
+  </header>
+
+  <div class="board" id="board"></div>
+</div>
+
+<script>
+  // ---- Data snapshot (baked in at publish time by generate.py) ----
+  const DATA = __DATA_JSON__;
+
+  // ---- Personalize from data (name, passphrase, optional Sync button) ----
+  const OWNER = DATA.owner || "";
+  if (OWNER) {
+    document.title = OWNER + " — Project Status";
+    document.getElementById("brand-name").textContent = OWNER;
+    document.getElementById("gate-name").textContent = OWNER;
+  }
+  // Passphrase is a cosmetic speed-bump only (page source + data are still readable).
+  const VIEW_PASSPHRASE = DATA.view_passphrase || "changeme";
+
+  // Optional "Sync now" button — only appears if a Worker URL is configured (advanced tier).
+  if (DATA.worker_url) {
+    const a = document.createElement("a");
+    a.id = "syncBtn";
+    a.className = "btn";
+    a.href = String(DATA.worker_url).replace(/\/+$/, "") + "/?sync=1";
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.title = "Request a fresh Slack + Asana scan. The board rebuilds server-side — works even if your computer is off.";
+    a.textContent = "⟳ Sync now";
+    document.querySelector(".header-right").appendChild(a);
+  }
+
+  function safeStorageGet(key) { try { return localStorage.getItem(key); } catch (e) { return null; } }
+  function safeStorageSet(key, val) { try { localStorage.setItem(key, val); } catch (e) {} }
+
+  function unlockGate() {
+    document.getElementById("gate").style.display = "none";
+    document.querySelector(".page").style.display = "block";
+  }
+
+  if (safeStorageGet("dashboardViewUnlocked") === "1") {
+    unlockGate();
+  } else {
+    document.getElementById("gate-submit").addEventListener("click", checkGatePassphrase);
+    document.getElementById("gate-input").addEventListener("keydown", (e) => {
+      if (e.key === "Enter") checkGatePassphrase();
+    });
+  }
+
+  function checkGatePassphrase() {
+    const val = document.getElementById("gate-input").value;
+    if (val === VIEW_PASSPHRASE) {
+      safeStorageSet("dashboardViewUnlocked", "1");
+      unlockGate();
+    } else {
+      document.getElementById("gate-error").style.display = "block";
+    }
+  }
+
+  const STATUS_ORDER = ["Project Not Started", "In Progress", "Waiting for Feedback", "Stale"];
+  const STATUS_COLOR = {
+    "Project Not Started": "var(--not-started)",
+    "In Progress": "var(--in-progress)",
+    "Waiting for Feedback": "var(--waiting)",
+    "Stale": "var(--stale)",
+  };
+
+  const SLACK_ICON = `<svg viewBox="0 0 122.8 122.8" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M25.8 77.6c0 7.1-5.8 12.9-12.9 12.9S0 84.7 0 77.6s5.8-12.9 12.9-12.9h12.9v12.9z" fill="#e01e5a"/>
+    <path d="M32.3 77.6c0-7.1 5.8-12.9 12.9-12.9s12.9 5.8 12.9 12.9v32.3c0 7.1-5.8 12.9-12.9 12.9s-12.9-5.8-12.9-12.9V77.6z" fill="#e01e5a"/>
+    <path d="M45.2 25.8c-7.1 0-12.9-5.8-12.9-12.9S38.1 0 45.2 0s12.9 5.8 12.9 12.9v12.9H45.2z" fill="#36c5f0"/>
+    <path d="M45.2 32.3c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9H12.9C5.8 58.1 0 52.3 0 45.2s5.8-12.9 12.9-12.9h32.3z" fill="#36c5f0"/>
+    <path d="M97 45.2c0-7.1 5.8-12.9 12.9-12.9s12.9 5.8 12.9 12.9-5.8 12.9-12.9 12.9H97V45.2z" fill="#2eb67d"/>
+    <path d="M90.5 45.2c0 7.1-5.8 12.9-12.9 12.9s-12.9-5.8-12.9-12.9V12.9C64.7 5.8 70.5 0 77.6 0s12.9 5.8 12.9 12.9v32.3z" fill="#2eb67d"/>
+    <path d="M77.6 97c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9-12.9-5.8-12.9-12.9V97h12.9z" fill="#ecb22e"/>
+    <path d="M77.6 90.5c-7.1 0-12.9-5.8-12.9-12.9s5.8-12.9 12.9-12.9h32.3c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9H77.6z" fill="#ecb22e"/>
+  </svg>`;
+
+  function fmtDate(iso) {
+    if (!iso) return "—";
+    const d = new Date(iso + "T00:00:00Z");
+    if (isNaN(d)) return iso;
+    return d.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
+  }
+  function fmtUpdatedAt(iso) {
+    if (!iso) return "";
+    const d = new Date(iso);
+    if (isNaN(d)) return iso;
+    return "Last updated " + d.toLocaleString(undefined, { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
+  }
+  function escapeHtml(str) {
+    const div = document.createElement("div");
+    div.textContent = str == null ? "" : str;
+    return div.innerHTML;
+  }
+
+  function render(data) {
+    document.getElementById("updated").textContent = fmtUpdatedAt(data.updated_at);
+    const projects = data.projects || [];
+    const byStatus = {};
+    STATUS_ORDER.forEach((s) => (byStatus[s] = []));
+    projects.forEach((p) => {
+      const s = STATUS_ORDER.includes(p.status) ? p.status : "Project Not Started";
+      byStatus[s].push(p);
+    });
+
+    const board = document.getElementById("board");
+    board.innerHTML = "";
+    STATUS_ORDER.forEach((status) => {
+      const items = byStatus[status].slice().sort((a, b) =>
+        (b.last_activity || "").localeCompare(a.last_activity || "")
+      );
+      const col = document.createElement("div");
+      col.className = "column";
+      const header = document.createElement("div");
+      header.className = "column-header";
+      header.innerHTML = `<span class="dot" style="background:${STATUS_COLOR[status]}"></span>${status} <span class="count">(${items.length})</span>`;
+      col.appendChild(header);
+
+      if (!items.length) {
+        const empty = document.createElement("div");
+        empty.className = "empty-col";
+        empty.textContent = "Nothing here";
+        col.appendChild(empty);
+      }
+
+      items.forEach((p) => {
+        const card = document.createElement("div");
+        card.className = "card";
+        const slackUrl = p.channel_id
+          ? `https://slack.com/app_redirect?channel=${encodeURIComponent(p.channel_id)}`
+          : null;
+        const team = Array.isArray(p.team) ? p.team.filter(Boolean) : [];
+        const noteSummary = typeof p.note === "string" ? p.note : (p.note && p.note.summary) || "";
+        const details = Array.isArray(p.details) ? p.details.filter(Boolean) : [];
+        const detailsHtml = details.length
+          ? `<ul class="card-details">${details.map((d) => `<li>${escapeHtml(d)}</li>`).join("")}</ul>`
+          : "";
+        card.innerHTML = `
+          <div class="card-header">
+            <div class="card-title-row">
+              <div class="card-title">${escapeHtml(p.display_name || p.channel_name || "Untitled project")}</div>
+              ${slackUrl ? `<a class="slack-link" href="${slackUrl}" target="_blank" rel="noopener" title="Open #${escapeHtml(p.channel_name || "")} in Slack">${SLACK_ICON}</a>` : ""}
+            </div>
+            <div class="card-number">#${escapeHtml(p.project_number || "—")}</div>
+          </div>
+          <div class="card-body">
+            <div class="card-note">${escapeHtml(noteSummary)}</div>
+            ${detailsHtml}
+            <div class="card-footer">Last activity: ${fmtDate(p.last_activity)}</div>
+            ${team.length ? `<div class="card-team">${escapeHtml(team.join(", "))}</div>` : ""}
+          </div>
+        `;
+        col.appendChild(card);
+      });
+      board.appendChild(col);
+    });
+  }
+
+  render(DATA);
+</script>

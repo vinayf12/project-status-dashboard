@@ -1,0 +1,19 @@
+{
+  "owner": "Your Name",
+  "view_passphrase": "changeme",
+  "worker_url": "",
+  "updated_at": "2026-01-01T00:00:00Z",
+  "projects": [
+    {
+      "project_number": "101",
+      "channel_id": "C0XXXXXXX",
+      "channel_name": "acme-101-launch-video",
+      "display_name": "Acme — Launch Video",
+      "status": "In Progress",
+      "note": "One-line summary of where this stands.",
+      "details": ["What just happened", "Next milestone / due date"],
+      "last_activity": "2026-01-01",
+      "team": ["You", "Teammate A", "Teammate B"]
+    }
+  ]
+}
