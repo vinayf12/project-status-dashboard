@@ -51,29 +51,32 @@ Superside client project channels follow a consistent format:
 <client>-<PROJECT_NUMBER>-<description>
 ```
 
-- **`PROJECT_NUMBER`** is a **6-digit number** (e.g. `224533`) embedded in the
-  channel name. This is the reliable identifier — treat any Slack channel whose
-  name contains a 6-digit number as a client project.
-- **`<client>`** is the brand slug, sometimes with a suffix
+- **`<client>`** (a real client/brand name) comes **BEFORE** a **6-digit
+  `PROJECT_NUMBER`** (e.g. `224533`). The client-name-then-number shape is the
+  reliable signal. Client slug may carry a suffix
   (`wex10-4-…`, `oysterhr-i-…`, `lucidmotor-…`, `dynaparcor-…`).
 - **`<description>`** is the project name in slug form.
 
 To build the project list:
-1. Find the Slack channels the **current user is a member of** whose name matches
-   the pattern above (contains a 6-digit project number). Skip general/internal
-   channels (no project number) — e.g. #everyone-can-build, #general.
-2. For each, capture `channel_id`, `channel_name`, and the `project_number`
-   (the 6 digits).
+1. Find the Slack channels the **current user is a member of** matching the
+   pattern above. **Exclude:**
+   - channels with no 6-digit project number (e.g. #everyone-can-build, #general),
+   - **number-first** channels (the number leads, no real client name before it),
+   - temp / test / scratch channels.
+2. For each, capture `channel_id`, `channel_name`, and the `project_number`.
 3. Derive a clean **`display_name`** = `"Client — Title Case Description"` using
    judgment. Examples:
    - `lucidmotor-252603-bookademopaidads` → `"Lucid Motors — Book a Demo Paid Ads"`
    - `oysterhr-i-199961-brandassetlibrary` → `"OysterHR — Brand Asset Library"`
    - `wex10-4-224533-cont-…-newclaims-paid` → `"Wex — New Claims Paid"`
 
-**Membership is the on/off switch:** if the user has left a channel, that project
-drops off the board. Re-discover on every refresh so new channels appear and old
-ones fall away automatically. (If the user *wants* to hand-pick or exclude a few,
-let them — but the default is auto-discovery, no list required.)
+**Membership is the on/off switch:** if the user has left a channel, drop that
+project. Re-discover on every refresh so new channels appear and old ones fall
+away automatically. **Transient-error guardrail:** only drop a project when the
+channel is genuinely gone (`channel_not_found` *and* not found via search) — never
+drop on a one-off API/transient error, or a flaky run would wipe real projects.
+(If the user wants to hand-pick or exclude a few, let them — but the default is
+auto-discovery, no list required.)
 
 ## Step 3 — Scan each project (read-only)
 
@@ -87,8 +90,10 @@ For EACH identified project, using the Slack and Asana connectors:
   long). *Waiting for Feedback* = delivered, awaiting client reply. *In Progress*
   = active work or scheduled milestones. *Not Started* = kicked off but no work
   and nothing scheduled.
-- Write a one-line **note** + 2–4 **bullets** of what's actually happening,
-  a `last_activity` date (YYYY-MM-DD), and the **team**.
+- Write a one-line **note** (concise summary) + 2–4 short **details** bullets of
+  what's actually happening, a `last_activity` date (YYYY-MM-DD), and the **team**.
+- **Drop fully-completed / closed projects** — if the work is delivered and the
+  project is wrapped, leave it off the board (it's not "active" anymore).
 - **Never post** anything to Slack or Asana. Read only.
 
 ## Step 4 — Write data.json
@@ -115,10 +120,10 @@ For EACH identified project, using the Slack and Asana connectors:
 }
 ```
 Notes:
+- Format is `note` (one summary line) + `details` (2–4 short bullet fragments).
+  There are no editable note boxes / `manual_note` fields — the board is read-only.
 - Leave `worker_url` empty unless the user set up the advanced Sync button
   (see the advanced section). When empty, the board simply has no Sync button.
-- If a `manual_note` field exists on a project from a previous run, **preserve it
-  verbatim** — never overwrite user notes.
 
 ## Step 5 — Bake
 
@@ -153,8 +158,8 @@ Rebuild the project status board.
    Add channels that are new, drop ones I've left.
 3. For each project: read its Slack channel + cross-check Asana, reclassify
    status (Project Not Started / In Progress / Waiting for Feedback / Stale),
-   write a one-line note + 2-4 bullets, last_activity, and the team.
-   Preserve any existing manual_note field verbatim.
+   write a one-line note + 2-4 details bullets, last_activity, and the team.
+   Drop fully-completed projects and channels I've left (transient-error guarded).
 4. Write data.json with updated_at = current UTC time.
 5. Run: python3 assets/generate.py data.json assets/template.html out.html
 6. Publish out.html to the SAME existing artifact URL (do not create a new one).
