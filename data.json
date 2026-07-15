@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-14T14:45:49Z",
+  "updated_at": "2026-07-15T05:26:00Z",
   "projects": [
     {
       "project_number": "224533",
@@ -7,13 +7,14 @@
       "channel_name": "wex10-4-224533-cont-203818-10-4newclaims-paid",
       "display_name": "Wex — New Claims Paid",
       "status": "In Progress",
-      "note": "Active AI video execution on the client's 'Billboard Split' treatment.",
+      "note": "Active AI video execution on the 'Billboard Split' treatment; D2 review milestones now set.",
       "details": [
-        "Diego built corrected billboard scenes for the storyboard (7/10)",
-        "Bianca reviewed inserts 7/13 — 'look perfect', one minor shot note",
-        "Leonardo back from PTO 7/13"
+        "Bianca reviewed billboard inserts 7/13 — 'look perfect', one minor note on a distorted hands/phone shot",
+        "Leonardo back from PTO 7/13 and catching up",
+        "New D2 milestones created: Internal review due Jul 15, Customer review due Jul 16",
+        "Angelica following up to align a client share"
       ],
-      "last_activity": "2026-07-13",
+      "last_activity": "2026-07-15",
       "team": [
         "Juan",
         "Vinay",
@@ -27,11 +28,11 @@
       "channel_name": "strava-279324-sskuwinbackjourney-creativeresourcing",
       "display_name": "Strava — SSKU Winback Journey",
       "status": "In Progress",
-      "note": "Feedback implemented; exporting assets for final delivery (CD3).",
+      "note": "FINAL version + Google exports sent to client 7/14; V3 CR and final files due 7/15.",
       "details": [
-        "Copy approved 7/14; moved to EXT for final delivery",
+        "FINAL EXT design + Google exports sent to customer 7/14",
         "Vinay exported Desktop/Mobile 2x + icons 4x; Amori updated exports 7/14",
-        "Asana: V3 IR overdue (due 7/14), V3 CR + Final Files due 7/15"
+        "Copy approved 7/14; Asana V3 CR + 'V3 and Final Files Delivery' due Jul 15"
       ],
       "last_activity": "2026-07-14",
       "team": [
@@ -47,10 +48,11 @@
       "channel_name": "strava-269357-whatsnewmaycarousel",
       "display_name": "Strava — What's New May Carousel",
       "status": "Waiting for Feedback",
-      "note": "Awaiting client approval on F1 — 1 day overdue, not stale.",
+      "note": "F1 delivered 7/9; client approval overdue since 7/13, still no reply.",
       "details": [
-        "F1 (CD3 + Google exports) sent to customer 7/9",
-        "Asana approval was due 7/13; no client reply as of 7/14"
+        "Creative Delivery 3 (F1) + Google exports sent to customer 7/9",
+        "Asana 'Client Approval Due - F1' was due Jul 13 — now overdue, no client response",
+        "Watch for stall risk if silence continues"
       ],
       "last_activity": "2026-07-09",
       "team": [
@@ -66,10 +68,11 @@
       "channel_name": "mitsubishi-218254-mitsubishipowerkeyvisual",
       "display_name": "Mitsubishi — Power Key Visual",
       "status": "Waiting for Feedback",
-      "note": "KV Presentation V2 in client review; ~1 week, no reply yet.",
+      "note": "KV Presentation V2 in client review since 7/7; ~1 week, no feedback yet.",
       "details": [
-        "V2 sent to customer 7/7 after a week of Figma iterations (7/1–7/7)",
-        "No client feedback as of 7/14"
+        "V2 sent to customer 7/7 after a week of Figma iterations",
+        "Final-files milestone flagged 7/10; awaiting client feedback to proceed",
+        "No client response as of 7/15 — watch for stall"
       ],
       "last_activity": "2026-07-07",
       "team": [
@@ -85,11 +88,11 @@
       "channel_name": "oysterhr-i-199961-brandassetlibrary",
       "display_name": "OysterHR — Brand Asset Library",
       "status": "Waiting for Feedback",
-      "note": "Draft delivered; client reviewing in detail before debrief.",
+      "note": "V1 library delivered; client happy with setup 7/7, reviewing in detail before debrief.",
       "details": [
-        "New draft delivered 7/3 (real work 6/29–7/3)",
-        "Client confirmed happy with initial setup 7/7",
-        "Watch closely — history of 2.5-month stalls behind vague 'awaiting feedback'"
+        "V1 (EXT Brand Asset Library) sent to customer 7/3",
+        "Client confirmed happy with initial setup 7/7; reviewing in detail before debrief",
+        "Watch closely — history of long stalls behind a vague 'awaiting feedback'"
       ],
       "last_activity": "2026-07-07",
       "team": [
@@ -105,13 +108,13 @@
       "channel_name": "strava-256899-juneorganicsocialcarousels",
       "display_name": "Strava — June Organic Social Carousels",
       "status": "In Progress",
-      "note": "Feedback in; approved exports sent, World Cup post in production.",
+      "note": "Active; client export tweaks handled 7/15, World Cup post in production (CR due 7/15).",
       "details": [
         "6 approved carousel exports sent to client 7/14",
-        "Types of Lifter carousel ready for review 7/14",
-        "Asana: World Cup IR overdue (due 7/14), CR due 7/15"
+        "Client asked for the lifter-alignment chart as 4x5 (1080x1350); Vinay re-exported 7/15",
+        "World Cup post: IR overdue, CR due Jul 15; 'Types of Lifter' carousel ready for review"
       ],
-      "last_activity": "2026-07-14",
+      "last_activity": "2026-07-15",
       "team": [
         "Amori",
         "Vinay",
@@ -125,11 +128,11 @@
       "channel_name": "tomtom-234532-lifestyleimagesfortomtomcommunity",
       "display_name": "TomTom — Lifestyle Images for Community",
       "status": "In Progress",
-      "note": "Final selection approved; in post-production on finals.",
+      "note": "Final selection (V6) approved 7/13; in post-production, IR/CR milestones Jul 15–17.",
       "details": [
-        "V6 approved 7/13; moved into post-production",
-        "Manuel executing edits across two 10-image batches",
-        "IR/CR milestones 7/15–7/17; Bradley pushing for speed"
+        "V6 Final Selection approved 7/13; moved into post-production",
+        "Manuel executing edits across two 10-image batches (5.3 hrs allocated)",
+        "IR/CR milestones set Jul 15–17; Bradley pushing for speed to show value"
       ],
       "last_activity": "2026-07-13",
       "team": [
@@ -145,11 +148,11 @@
       "channel_name": "lucidmotor-252603-bookademopaidads",
       "display_name": "Lucid Motors — Book a Demo Paid Ads",
       "status": "Stale",
-      "note": "~4 weeks of client silence since layoffs; no progress.",
+      "note": "~4 weeks of client silence since the 6/23 layoffs; still awaiting feedback.",
       "details": [
         "Final assets sent for review 6/18",
-        "Client cited layoffs 6/23, then went silent",
-        "Team still chasing (Angeles, 7/14)"
+        "Client cited layoffs 6/23, then went quiet",
+        "Angeles still chasing 7/14 — no client response"
       ],
       "last_activity": "2026-07-14",
       "team": [
@@ -165,11 +168,11 @@
       "channel_name": "lucidmotor-252620-generalawarenesspaidads",
       "display_name": "Lucid Motors — General Awareness Paid Ads",
       "status": "Stale",
-      "note": "~3.5 weeks of client silence since layoffs; no progress.",
+      "note": "~4 weeks of client silence since the 6/23 layoffs; still awaiting feedback.",
       "details": [
         "Assets sent for review 6/19",
         "Client cited layoffs 6/23",
-        "Chased 7/6 (Chris) and 7/14 (Angeles) — no response"
+        "Chased 7/6 and 7/14 (Angeles) — no response"
       ],
       "last_activity": "2026-07-14",
       "team": [
@@ -185,11 +188,11 @@
       "channel_name": "dynaparcor-201583-spt-tracmileproductlaunchimageassets",
       "display_name": "Dynapar — Product Launch Image Assets",
       "status": "Stale",
-      "note": "Paused ~5 months; no client contact since D1 (Feb 20).",
+      "note": "Paused ~5 months; on-hold until mid-late July, no client contact since D1 (Feb 20).",
       "details": [
-        "D1 sent 2026-02-20; nothing real since",
-        "Only internal PTO/on-hold notes since",
-        "Monise 6/30: paused until mid-late July"
+        "D1 sent 2026-02-20; nothing substantive since",
+        "Monise (5/28): project on-hold until mid-late July",
+        "Only internal PTO/coverage notes since (Monise OOO to 7/13, Benitta covering)"
       ],
       "last_activity": "2026-06-30",
       "team": [
@@ -204,14 +207,14 @@
       "channel_id": "C0BGWNGVCN9",
       "channel_name": "strava-292674-garmin-remindmelater-retargeting-ftue-creativeresourcing",
       "display_name": "Strava — Garmin Remind Me Later Retargeting FTUE",
-      "status": "Project Not Started",
-      "note": "New project; plan shared, awaiting client confirmation.",
+      "status": "In Progress",
+      "note": "Kicked off 7/14; full V1–V3 milestone schedule set, first IR due Jul 17 (no drafts yet).",
       "details": [
-        "Channel created 7/13; plan shared with client 7/14",
-        "Maria: nothing to execute yet (IR planned Thu, CR Fri)",
-        "Matching Asana project exists; no creative work started"
+        "Project officially started 7/14; channel + Asana set up 7/13",
+        "Full schedule created: V1 IR Jul 17, V1 CR Jul 20, V1 Delivery Jul 20 (V2/V3 through Jul 29)",
+        "No creative work executed yet — Maria: nothing to execute until first draft"
       ],
-      "last_activity": "2026-07-14",
+      "last_activity": "2026-07-15",
       "team": [
         "Maria",
         "Vinay",

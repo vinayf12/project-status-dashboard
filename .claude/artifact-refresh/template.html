@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="robots" content="noindex, nofollow, noarchive" />
-<title>Vinay Pittampally</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Vinay Pittampally — Project Status</title>
 <style>
   :root {
     --text: #1c1f26;
@@ -63,6 +54,7 @@
     max-width: 1400px;
     margin: 0 auto;
     padding: 24px 24px 48px;
+    display: none;
   }
 
   header {
@@ -80,8 +72,8 @@
     box-shadow: 0 10px 34px rgba(31, 41, 55, 0.07);
   }
   .brand h1 {
-    margin: 0 0 2px;
-    font-family: "Fraunces", Georgia, serif;
+    margin: 0 0 6px;
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
     font-weight: 600;
     font-style: italic;
     font-size: 26px;
@@ -110,6 +102,10 @@
     font: inherit;
     font-size: 12.5px;
     font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
     cursor: pointer;
     padding: 7px 14px;
     border-radius: 999px;
@@ -117,20 +113,11 @@
     border: 1px solid rgba(255, 255, 255, 0.8);
     color: var(--text);
     box-shadow: 0 2px 8px rgba(31, 41, 55, 0.05);
-    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
-  .btn:hover:not(:disabled) {
+  .btn:hover {
     transform: translateY(-1px);
     box-shadow: 0 6px 16px rgba(31, 41, 55, 0.1);
-  }
-  .btn:disabled {
-    opacity: 0.6;
-    cursor: default;
-    transform: none;
-  }
-  .btn.active {
-    background: rgba(99, 102, 241, 0.15);
-    border-color: rgba(99, 102, 241, 0.4);
   }
 
   .board {
@@ -239,56 +226,32 @@
   }
   .card-note {
     font-size: 12px;
-    color: #4b5563;
+    color: #374151;
+    font-weight: 500;
     line-height: 1.45;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+  }
+  .card-details {
+    margin: 0;
+    padding-left: 15px;
+    font-size: 11.5px;
+    color: #4b5563;
+    line-height: 1.4;
+  }
+  .card-details li {
+    margin-bottom: 3px;
   }
   .card-footer {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(17, 24, 39, 0.08);
     font-size: 11px;
     color: var(--text-muted);
   }
-
   .card-team {
     font-size: 10.5px;
     color: #9aa1ac;
     margin-top: 6px;
-  }
-
-  .note-block {
-    margin-top: 10px;
-  }
-  .note-input {
-    width: 100%;
-    font: inherit;
-    font-size: 11.5px;
-    line-height: 1.4;
-    color: var(--text);
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(14px) saturate(160%);
-    -webkit-backdrop-filter: blur(14px) saturate(160%);
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
-    padding: 7px 9px;
-    resize: vertical;
-    min-height: 40px;
-    box-shadow: 0 2px 8px rgba(31, 41, 55, 0.04);
-    transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
-  }
-  .note-input:focus {
-    outline: none;
-    background: rgba(255, 255, 255, 0.65);
-    border-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 4px 14px rgba(31, 41, 55, 0.08);
-  }
-  .note-input::placeholder {
-    color: var(--text-muted);
-  }
-  .note-status {
-    display: block;
-    font-size: 10px;
-    color: var(--text-muted);
-    margin-top: 3px;
-    height: 12px;
   }
 
   .empty-col {
@@ -296,17 +259,6 @@
     color: var(--text-muted);
     font-style: italic;
     padding: 8px 4px;
-  }
-  #error {
-    margin: 20px 2px;
-    padding: 16px;
-    background: rgba(254, 242, 242, 0.75);
-    backdrop-filter: blur(10px);
-    border: 1px solid #fecaca;
-    border-radius: 14px;
-    color: #991b1b;
-    font-size: 13px;
-    display: none;
   }
 
   #gate {
@@ -331,7 +283,7 @@
     text-align: center;
   }
   #gate-card h2 {
-    font-family: "Fraunces", Georgia, serif;
+    font-family: "Fraunces", Georgia, "Times New Roman", serif;
     font-style: italic;
     font-weight: 600;
     font-size: 20px;
@@ -364,18 +316,18 @@
     color: #fff;
     cursor: pointer;
   }
+  #gate-submit:focus-visible,
+  #gate-input:focus-visible {
+    outline: 2px solid #4f46e5;
+    outline-offset: 2px;
+  }
   #gate-error {
     margin-top: 10px;
     font-size: 12px;
     color: #b91c1c;
     display: none;
   }
-  .page {
-    display: none;
-  }
 </style>
-</head>
-<body>
 
 <div id="gate">
   <div id="gate-card">
@@ -391,28 +343,40 @@
   <header>
     <div class="brand">
       <h1>Vinay Pittampally</h1>
-      <p>Live status of active client projects, pulled from Slack</p>
+      <p>Status of active client projects, pulled from Slack &amp; Asana</p>
     </div>
     <div class="header-right">
       <div id="updated"></div>
-      <button id="syncBtn" class="btn" title="Request a fresh Slack/Asana scan (picked up within ~20 min)">🔄 Sync</button>
+      <a id="syncBtn" class="btn"
+         href="https://project-status-dashboard-worker.vinaypittampally.workers.dev/?sync=1"
+         target="_blank" rel="noopener"
+         title="Request a fresh Slack + Asana scan. The board rebuilds server-side within ~20 min — works even if your computer is off.">⟳ Sync now</a>
     </div>
   </header>
 
-  <div id="error"></div>
   <div class="board" id="board"></div>
 </div>
 
 <script>
-  // Casual speed-bump only, not real security (page source + data.json are still directly fetchable). Change this to whatever you want.
+  // ---- Data snapshot (baked in at publish time; refreshed a couple times a day) ----
+  const DATA = __DATA_JSON__;
+
+  // ---- Passphrase speed-bump (cosmetic; not real security) ----
   const VIEW_PASSPHRASE = "12345";
+
+  function safeStorageGet(key) {
+    try { return localStorage.getItem(key); } catch (e) { return null; }
+  }
+  function safeStorageSet(key, val) {
+    try { localStorage.setItem(key, val); } catch (e) { /* sandboxed storage — ignore */ }
+  }
 
   function unlockGate() {
     document.getElementById("gate").style.display = "none";
     document.querySelector(".page").style.display = "block";
   }
 
-  if (localStorage.getItem("dashboardViewUnlocked") === "1") {
+  if (safeStorageGet("dashboardViewUnlocked") === "1") {
     unlockGate();
   } else {
     document.getElementById("gate-submit").addEventListener("click", checkGatePassphrase);
@@ -424,7 +388,7 @@
   function checkGatePassphrase() {
     const val = document.getElementById("gate-input").value;
     if (val === VIEW_PASSPHRASE) {
-      localStorage.setItem("dashboardViewUnlocked", "1");
+      safeStorageSet("dashboardViewUnlocked", "1");
       unlockGate();
     } else {
       document.getElementById("gate-error").style.display = "block";
@@ -445,7 +409,7 @@
     "Stale": "var(--stale)",
   };
 
-  const SLACK_ICON = `<svg viewBox="0 0 122.8 122.8" xmlns="http://www.w3.org/2000/svg">
+  const SLACK_ICON = `<svg viewBox="0 0 122.8 122.8" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M25.8 77.6c0 7.1-5.8 12.9-12.9 12.9S0 84.7 0 77.6s5.8-12.9 12.9-12.9h12.9v12.9z" fill="#e01e5a"/>
     <path d="M32.3 77.6c0-7.1 5.8-12.9 12.9-12.9s12.9 5.8 12.9 12.9v32.3c0 7.1-5.8 12.9-12.9 12.9s-12.9-5.8-12.9-12.9V77.6z" fill="#e01e5a"/>
     <path d="M45.2 25.8c-7.1 0-12.9-5.8-12.9-12.9S38.1 0 45.2 0s12.9 5.8 12.9 12.9v12.9H45.2z" fill="#36c5f0"/>
@@ -455,46 +419,6 @@
     <path d="M77.6 97c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9-12.9-5.8-12.9-12.9V97h12.9z" fill="#ecb22e"/>
     <path d="M77.6 90.5c-7.1 0-12.9-5.8-12.9-12.9s5.8-12.9 12.9-12.9h32.3c7.1 0 12.9 5.8 12.9 12.9s-5.8 12.9-12.9 12.9H77.6z" fill="#ecb22e"/>
   </svg>`;
-
-  // Requests go through a small Cloudflare Worker proxy that holds the real GitHub token server-side — no secret lives in this page.
-  const WORKER_URL = "https://project-status-dashboard-worker.vinaypittampally.workers.dev";
-
-  let LAST_DATA = null;
-
-  async function requestSync() {
-    const res = await fetch(`${WORKER_URL}/sync`, { method: "POST" });
-    const body = await res.json();
-    if (!res.ok || !body.ok) throw new Error(body.error || `Sync request failed: ${res.status}`);
-  }
-
-  async function saveManualNote(projectNumber, noteText) {
-    const res = await fetch(`${WORKER_URL}/note`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ project_number: projectNumber, note: noteText }),
-    });
-    const body = await res.json();
-    if (!res.ok || !body.ok) throw new Error(body.error || `Save failed: ${res.status}`);
-    return body.data;
-  }
-
-  document.getElementById("syncBtn").addEventListener("click", async () => {
-    const btn = document.getElementById("syncBtn");
-    btn.disabled = true;
-    btn.textContent = "Requesting…";
-    try {
-      await requestSync();
-      btn.textContent = "✓ Requested";
-      setTimeout(() => {
-        btn.textContent = "🔄 Sync";
-        btn.disabled = false;
-      }, 5000);
-    } catch (err) {
-      alert("Sync request failed: " + err.message);
-      btn.textContent = "🔄 Sync";
-      btn.disabled = false;
-    }
-  });
 
   function fmtDate(iso) {
     if (!iso) return "—";
@@ -512,8 +436,13 @@
     });
   }
 
+  function escapeHtml(str) {
+    const div = document.createElement("div");
+    div.textContent = str == null ? "" : str;
+    return div.innerHTML;
+  }
+
   function render(data) {
-    LAST_DATA = data;
     document.getElementById("updated").textContent = fmtUpdatedAt(data.updated_at);
 
     const projects = data.projects || [];
@@ -524,7 +453,6 @@
       byStatus[s].push(p);
     });
 
-    // board
     const board = document.getElementById("board");
     board.innerHTML = "";
     STATUS_ORDER.forEach((status) => {
@@ -554,8 +482,11 @@
           ? `https://slack.com/app_redirect?channel=${encodeURIComponent(p.channel_id)}`
           : null;
         const team = Array.isArray(p.team) ? p.team.filter(Boolean) : [];
-        const pn = p.project_number;
-        const manualNote = p.manual_note || "";
+        const noteSummary = typeof p.note === "string" ? p.note : (p.note && p.note.summary) || "";
+        const details = Array.isArray(p.details) ? p.details.filter(Boolean) : [];
+        const detailsHtml = details.length
+          ? `<ul class="card-details">${details.map((d) => `<li>${escapeHtml(d)}</li>`).join("")}</ul>`
+          : "";
         card.innerHTML = `
           <div class="card-header">
             <div class="card-title-row">
@@ -565,13 +496,10 @@
             <div class="card-number">#${escapeHtml(p.project_number || "—")}</div>
           </div>
           <div class="card-body">
-            <div class="card-note">${escapeHtml(p.note || "")}</div>
+            <div class="card-note">${escapeHtml(noteSummary)}</div>
+            ${detailsHtml}
             <div class="card-footer">Last activity: ${fmtDate(p.last_activity)}</div>
             ${team.length ? `<div class="card-team">${escapeHtml(team.join(", "))}</div>` : ""}
-            <div class="note-block">
-              <textarea class="note-input" data-project="${pn}" placeholder="Notes">${escapeHtml(manualNote)}</textarea>
-              <span class="note-status" data-project-status="${pn}"></span>
-            </div>
           </div>
         `;
         col.appendChild(card);
@@ -581,81 +509,5 @@
     });
   }
 
-  function escapeHtml(str) {
-    const div = document.createElement("div");
-    div.textContent = str;
-    return div.innerHTML;
-  }
-
-  document.getElementById("board").addEventListener(
-    "focusout",
-    async (e) => {
-      const textarea = e.target.closest(".note-input");
-      if (!textarea) return;
-      const pn = textarea.dataset.project;
-      const value = textarea.value;
-      const existing = (LAST_DATA.projects || []).find((p) => p.project_number === pn);
-      if (existing && (existing.manual_note || "") === value.trim()) return; // no change, skip save
-
-      const statusEl = document.querySelector(`.note-status[data-project-status="${pn}"]`);
-      if (statusEl) statusEl.textContent = "Saving…";
-      try {
-        const updatedData = await saveManualNote(pn, value);
-        LAST_DATA = updatedData;
-        if (statusEl) {
-          statusEl.textContent = "Saved";
-          setTimeout(() => {
-            if (statusEl) statusEl.textContent = "";
-          }, 1500);
-        }
-      } catch (err) {
-        if (statusEl) statusEl.textContent = "Couldn't save";
-        alert("Couldn't save note: " + err.message);
-      }
-    },
-    true
-  );
-
-  fetch("data.json", { cache: "no-store" })
-    .then((r) => r.json())
-    .then(render)
-    .catch((err) => {
-      const el = document.getElementById("error");
-      el.style.display = "block";
-      el.textContent = "Couldn't load project data: " + err.message;
-    });
-
-  // Opened as .../?sync=1 (e.g. from the artifact's "Sync now" button): fire a sync
-  // request right away and show a confirmation. No passphrase needed just to refresh —
-  // this only asks the server to rebuild; it doesn't reveal any project data.
-  (function handleAutoSync() {
-    const params = new URLSearchParams(location.search);
-    if (params.get("sync") !== "1") return;
-    const gate = document.getElementById("gate");
-    const gateCard = document.getElementById("gate-card");
-    if (gate) gate.style.display = "flex";
-    if (gateCard) {
-      gateCard.innerHTML =
-        '<h2>Refreshing the board…</h2><p>Requesting a fresh Slack&nbsp;+&nbsp;Asana scan.</p>';
-    }
-    requestSync()
-      .then(() => {
-        if (gateCard) {
-          gateCard.innerHTML =
-            '<h2>✓ Sync requested</h2><p>The board rebuilds server-side within ~20 minutes — ' +
-            'you can close this tab. This runs even if your computer is off.</p>';
-        }
-      })
-      .catch((err) => {
-        if (gateCard) {
-          gateCard.innerHTML =
-            '<h2>Couldn’t request sync</h2><p>' +
-            escapeHtml(err && err.message ? err.message : "Please try again in a moment.") +
-            '</p>';
-        }
-      });
-  })();
+  render(DATA);
 </script>
-
-</body>
-</html>
