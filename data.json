@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-20T08:26:00Z",
+  "updated_at": "2026-07-21T08:10:00Z",
   "projects": [
     {
       "project_number": "224533",
@@ -7,12 +7,12 @@
       "channel_name": "wex10-4-224533-cont-203818-10-4newclaims-paid",
       "display_name": "Wex — New Claims Paid",
       "status": "In Progress",
-      "note": "Team is staffing a dedicated motion creative to build on the 7/17 client-approved direction; no new client feedback since the 7/16 'Truck on Road' mockup was sent for review.",
+      "note": "Gerone joined the channel 7/20 as the motion creative the team said they'd staff on 7/17, but no motion work-in-progress has been posted since.",
       "details": [
         "7/17: Client approved moving forward with adding graphic/motion elements to the truck concept",
         "7/17: Leonardo proposed pulling in Fariel or Gerone as the motion creative, sharing Nova's latest render for context",
-        "7/20: Gerone joined the project Slack channel, indicating the new motion resource has now been staffed",
-        "No Asana records found for this project (consistent with prior sync); tracking remains Slack-only"
+        "7/20: Gerone Valenzuela Perez joined the project Slack channel, confirming the motion resource is now staffed",
+        "No Asana records found for this project (consistent with prior syncs); no motion work has been posted yet since staffing"
       ],
       "last_activity": "2026-07-20",
       "team": [
@@ -28,12 +28,12 @@
       "channel_name": "strava-269357-whatsnewmaycarousel",
       "display_name": "Strava — What's New May Carousel",
       "status": "Stale",
-      "note": "Client Approval Due - F1 milestone (due 7/13) is now 7 days overdue with zero client reply and total Slack/Asana silence since the overdue flag fired on 7/13.",
+      "note": "Client Approval Due - F1 milestone (due 7/13) is now 8 days overdue with zero client reply and total Slack/Asana silence since the overdue flag fired.",
       "details": [
         "7/9: F1 final creative (Creative Delivery 3 + Google Drive exports) delivered to client; Figma EXT/INT files updated and shared internally",
         "7/10: F1 Delivery milestone passed due date (overdue flag fired); internal quality review for F1 completed same day",
         "7/13: Client Approval Due - F1 milestone overdue flag fired — no client response logged",
-        "7/13 through 7/20: full 7-day stretch with zero Slack messages and no Asana task changes — still 8 of 25 tasks open, unchanged since the 7/9-7/10 delivery push"
+        "7/13 through 7/21: a full 8-day stretch with zero Slack messages and no Asana progress — 5 of 26 tasks are still open in Asana (down from 8 of 25), but the two client-facing F1 milestones remain untouched"
       ],
       "last_activity": "2026-07-13",
       "team": [
@@ -49,11 +49,11 @@
       "channel_name": "mitsubishi-218254-mitsubishipowerkeyvisual",
       "display_name": "Mitsubishi — Power Key Visual",
       "status": "Stale",
-      "note": "Client has remained silent for 13 days since the V2 KV deck was delivered (7/7); the 7/10 internal ops question about final files was never answered and the channel has had zero activity for the last 10 days through 7/20.",
+      "note": "Client has remained silent for 14 days since the V2 KV deck was delivered (7/7); the channel itself has had zero activity for 11 days, since a 7/10 internal check on final files went unanswered.",
       "details": [
         "7/7: Emanuele delivered/sent the V2 KV Presentation deck to customer review (first draft + client send)",
         "7/9-7/10: Internal ops reminders asking whether final files had gone out to the client got no replies in-thread",
-        "7/10 through 7/20: Channel has had no further messages of any kind for 10 straight days — no client reply, no internal follow-up",
+        "7/10 through 7/21: Channel has had no further messages of any kind for 11 straight days — no client reply, no internal follow-up",
         "No Asana records found for this project; milestones tracked in Superside's internal PM tool"
       ],
       "last_activity": "2026-07-07",
@@ -70,11 +70,11 @@
       "channel_name": "oysterhr-i-199961-brandassetlibrary",
       "display_name": "OysterHR — Brand Asset Library",
       "status": "Stale",
-      "note": "13 days of continued silence since the 7/7 'client reviewing' update, with no debrief date set — this account has stalled under nearly identical wording multiple times before, and the pattern continues unbroken.",
+      "note": "14 days of continued silence since the 7/7 'client reviewing' update, with no debrief date set — this account has stalled under nearly identical wording multiple times before, and the pattern continues unbroken.",
       "details": [
         "7/3: WIP Brand Asset Library deck (V1, extension of the April guidelines) sent to the customer for review, with a Loom walkthrough; team awaiting feedback",
         "7/7: Bradley posted the only update since delivery — client is 'happy with the initial setup' and reviewing in more detail, will debrief 'once he's ready'; no debrief date was set",
-        "7/7 through 7/20: Total silence in the channel — no client response, no debrief scheduling, and no further internal activity for 13 days",
+        "7/7 through 7/21: Total silence in the channel — no client response, no debrief scheduling, and no further internal activity for 14 days",
         "No Asana records found for this project; milestones tracked in Superside's internal PM tool"
       ],
       "last_activity": "2026-07-07",
@@ -91,14 +91,14 @@
       "channel_name": "strava-256899-juneorganicsocialcarousels",
       "display_name": "Strava — June Organic Social Carousels",
       "status": "In Progress",
-      "note": "World Cup posts went live for the client 7/20; LA/NY hiking carousel IR tasks (due 7/17) are still open 3 days late as copy work only restarted today, with new CR Copy/Design tasks also due 7/20.",
+      "note": "Client (Jane Koo) returned comments on 7/21 that contradict the initial creative direction; Amori is flagging the team needs a clearer way to align direction and feedback rounds going forward.",
       "details": [
-        "7/17: World Cup posts delivered to client; LA/NY hiking carousel IR Copy and IR Design tasks (due 7/17) became overdue and remain incomplete in Asana as of 7/20",
-        "7/20: Amori confirmed both World Cup posts are now live on Strava's social channels",
-        "7/20: Claire began the LA/NY hiking carousel copy today, set up Client Delivery 7 in Figma by duplicating the prior hiking carousel design",
-        "Asana task count unchanged at 13 of 43 open; LA/NY CR Copy/Design tasks (due 7/20) are also still incomplete, so IR and CR are effectively converging on the same day"
+        "7/20: World Cup posts confirmed live on Strava's social channels; Claire began LA/NY hiking carousel copy, duplicating the prior hiking carousel design into Client Delivery 7",
+        "7/20: INT updated and Creative Delivery 7 (copy + design) sent to customer review; LA/NY CR Copy tasks closed in Asana but the CR Design tasks (Vinay, Amori) remain open past their 7/20 due date",
+        "7/21: Client comments came back contradicting the direction originally given, prompting Amori to ask the team to rethink how direction and feedback rounds are aligned",
+        "Asana: 11 of 41 tasks still open, including both LA/NY CR Design tasks and the older World Cup V2 CR Design task (Vinay) left incomplete since 7/16"
       ],
-      "last_activity": "2026-07-20",
+      "last_activity": "2026-07-21",
       "team": [
         "Amori",
         "Vinay",
@@ -112,12 +112,12 @@
       "channel_name": "tomtom-234532-lifestyleimagesfortomtomcommunity",
       "display_name": "TomTom — Lifestyle Images for Community",
       "status": "In Progress",
-      "note": "Client approved the delivered finals on 7/20; team is now logging final QC hours to close out the engagement.",
+      "note": "Client approved the delivered finals on 7/20; team is wrapping up by logging final QC hours, with no further activity since.",
       "details": [
         "7/17: Finals (all approved batches plus the 4 additionally-scoped images) were delivered to customer review after a scramble to hit the CR deadline",
         "7/20: Customer approved the delivered asset (Exports.zip) — the first confirmed client response since the 7/17 delivery, ending the wait",
         "7/20: Bradley asked the team to log remaining QC hours on the PM component, indicating the team is now in final wrap-up/QC mode rather than awaiting feedback",
-        "No Asana records found for this project — status is based on Slack activity only"
+        "No Asana records found for this project — status is based on Slack activity only; no new messages since 7/20"
       ],
       "last_activity": "2026-07-20",
       "team": [
@@ -133,11 +133,11 @@
       "channel_name": "lucidmotor-252603-bookademopaidads",
       "display_name": "Lucid Motors — Book a Demo Paid Ads",
       "status": "Stale",
-      "note": "Final assets delivered 6/18; client went silent after citing layoffs on 6/23 and still has not replied despite repeated internal chases through 7/20 — nearly 5 weeks of client silence with no Asana records found.",
+      "note": "Final assets delivered 6/18; client went silent after citing layoffs on 6/23 and still has not replied despite a fresh internal check-in on 7/20 — 4 full weeks of client silence with no Asana records found.",
       "details": [
         "6/18: Final assets (PDF + Word doc) delivered/sent to client for review after internal visual QA",
         "6/23: Client POC canceled the weekly sync citing a new round of layoffs; promised copy feedback by end of week, which never arrived",
-        "6/30 and 7/14-7/15: Internal AM/ops repeatedly chased for status; still no client reply",
+        "6/30, 7/14-7/15: Internal AM/ops repeatedly chased for status; still no client reply",
         "7/20: PM reconfirmed internally 'No updates on the project just yet' — client remains silent; no Asana records exist for this project"
       ],
       "last_activity": "2026-07-20",
@@ -154,7 +154,7 @@
       "channel_name": "lucidmotor-252620-generalawarenesspaidads",
       "display_name": "Lucid Motors — General Awareness Paid Ads",
       "status": "Stale",
-      "note": "Deliverable sent to customer review 6/19; client's POC went dark after a 6/23 layoffs notice and the promised 'feedback by EOW' never arrived — still silent as of 7/20, now 5+ weeks with no client response.",
+      "note": "Deliverable sent to customer review 6/19; client's POC went dark after a 6/23 layoffs notice and the promised 'feedback by EOW' never arrived — still silent as of the 7/20 check-in, now 4 full weeks with no client response.",
       "details": [
         "6/19: Copy + visual deliverables sent to customer review",
         "6/23: Client POC canceled the weekly sync citing a new round of layoffs; promised 'feedback by EOW' never arrived",
@@ -175,11 +175,11 @@
       "channel_name": "dynaparcor-201583-spt-tracmileproductlaunchimageassets",
       "display_name": "Dynapar — Product Launch Image Assets",
       "status": "Stale",
-      "note": "Project remains on hold since the Feb 20 D1 delivery; the 'mid-late July' resume window has now passed with no resumption update, and Monise's second PTO stint (June 30–July 13) also ended without any check-in.",
+      "note": "Project remains on hold since the Feb 20 D1 delivery; the 'mid-late July' resume window has passed with no resumption update, and Monise's return from her second PTO stint (back 7/13) has now gone 8 days without any check-in.",
       "details": [
         "2/20: Final D1 designs delivered to client; project went on hold pending next steps",
         "5/28: Monise announced the project would stay on hold until 'mid-late July,' with Benitta covering during her PTO",
-        "6/30: Monise posted a second OOO notice (back 7/13) — still the last message in the channel; no resumption update has been posted even though today (7/20) is 7 days past her stated return",
+        "6/30: Monise posted a second OOO notice (back 7/13) — still the last message in the channel; no resumption update has been posted even though today (7/21) is 8 days past her stated return",
         "No Asana records found for this project; milestones tracked in Superside's internal PM tool"
       ],
       "last_activity": "2026-06-30",
@@ -195,13 +195,13 @@
       "channel_id": "C0BGWNGVCN9",
       "channel_name": "strava-292674-garmin-remindmelater-retargeting-ftue-creativeresourcing",
       "display_name": "Strava — Garmin Remind Me Later Retargeting FTUE",
-      "status": "In Progress",
-      "note": "Copy finalized 7/20 and today's V1 client-review round for design/copy is due, but Vinay's V1 design task (overdue since 7/17) is still open in Asana ahead of the 7/21 client feedback deadline.",
+      "status": "Waiting for Feedback",
+      "note": "V1 was delivered to the customer 7/20 and Client Feedback Due - V1 is due today (7/21), but Vinay's V1 IR Design task (overdue since 7/17) and both VI CR Design tasks are still open in Asana.",
       "details": [
-        "7/17: Claire delivered V1 copy into Figma (one-day slip); ops bot flagged both IR Copy and IR Design tasks as overdue the same day",
-        "7/17: Vinay said he'd share designs Monday (7/20); no Slack confirmation yet that designs were actually shared",
-        "7/20: Claire posted 'All copy is 100% good to go!' and the IR Copy task was marked complete in Asana",
-        "7/20: CR Copy/CR Design (client-review prep) tasks are due today, and V1 Delivery milestone is due today ahead of Client Feedback Due - V1 tomorrow (7/21); Vinay's IR Design task remains incomplete, unchanged since 7/17"
+        "7/20: Copy and design finalized; V1 delivered to customer (Creative Delivery 1) via the EXT Figma link",
+        "7/20 22:31: V1 Delivery milestone was marked overdue in Asana despite the delivery going out, and Vinay's VI IR Design task (due 7/17) remains open four days after being flagged overdue",
+        "7/20: VI CR Design tasks for both Vinay and Amori (due 7/20) also remain incomplete in Asana",
+        "Client Feedback Due - V1 milestone is due today (7/21); no client response logged yet in Slack"
       ],
       "last_activity": "2026-07-20",
       "team": [
