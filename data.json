@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-07-22T08:13:49Z",
+  "updated_at": "2026-07-22T20:15:18Z",
   "projects": [
     {
       "project_number": "224533",
       "channel_id": "C0AUNGM22DQ",
       "channel_name": "wex10-4-224533-cont-203818-10-4newclaims-paid",
       "display_name": "Wex — New Claims Paid",
-      "status": "In Progress",
-      "note": "Motion creative Gerone Perez, staffed on 7/20, delivered and got internal approval on a full motion asset within a day, Angelica sent it to customer review on 7/21, and client feedback (CTA + trademark sizing) came back on 7/22 and is already being worked.",
+      "status": "Waiting for Feedback",
+      "note": "Client's CTA/trademark feedback on Branded Ad03 was turned around same-day; Angelica sent the revised stills and V1/V2 videos back to customer review the evening of 7/22, now awaiting reply.",
       "details": [
-        "7/22: Gerone shared a still-frame layout preview for a follow-up asset and is resolving the trademark-size feedback with Leonardo and Angelica.",
-        "7/22: Client feedback returned on the customer-reviewed 'Branded Ad03.mp4' — add a 'Download Today' CTA plus app-store logos on the truck's back, and make the TM mark on the '10-4 by WEX' billboard logo more visible.",
-        "7/21: Gerone posted first draft and draft 2 of the Branded Ad03 motion asset; Leonardo gave internal approval and Angelica sent it to customer review same day.",
-        "7/20: Gerone Valenzuela Perez joined the channel as the staffed motion creative, then began active work the next day."
+        "7/22 early morning: Client feedback returned on 'Branded Ad03.mp4' — add a 'Download Today' CTA plus app-store logos on the truck's back, and enlarge the TM mark on the '10-4 by WEX' billboard logo.",
+        "7/22 afternoon: Gerone turned around revised stills and two video versions (V1/V2) the same day; Leonardo approved internally ('these are great!!!').",
+        "7/22 evening: Juan Dupouy returned from PTO and offered to help; Angelica sent the updated V1/V2 assets back to customer review, now awaiting client reply.",
+        "7/20-7/21: Gerone Valenzuela Perez staffed as motion creative; first Branded Ad03 draft got internal approval and went to customer review 7/21."
       ],
       "last_activity": "2026-07-22",
       "team": ["Juan", "Vinay", "Angelica", "Leonardo", "Gerone"]
@@ -76,7 +76,7 @@
         "7/20: Team delivered Creative Delivery 7 (EXT) with Types of Lifter exports and LA/NY hiking carousel copy; the LA/NY CR Design tasks (Amori, Vinay) went overdue awaiting client direction.",
         "7/21: Amori flagged that Jane Koo's new comments contradict the original creative direction; Maria agreed the team should raise this with the client to align on clearer feedback rounds going forward.",
         "7/22: Feedback came in on Runner-to-Lifter and Summer Sports carousels, and copy feedback landed on the LA/NY hiking carousels, but Maria told the team to hold off on hiking-carousel design revisions until Jane shares an updated design template, expected 7/23.",
-        "7/22: Automated hours alert flagged that ~91% of the project's best-estimate hours have already been logged, raising a budget risk on remaining LA/NY and template rework."
+        "7/22: Claire raised an unresolved scope ambiguity on the NY carousel (1 club vs 3 clubs); Maria is following up with the client for clarification before adding new milestones."
       ],
       "last_activity": "2026-07-22",
       "team": ["Amori", "Vinay", "Danielle", "Estefania"]
@@ -151,14 +151,14 @@
       "channel_name": "strava-292674-garmin-remindmelater-retargeting-ftue-creativeresourcing",
       "display_name": "Strava — Garmin Remind Me Later Retargeting FTUE",
       "status": "In Progress",
-      "note": "Client confirmed on 7/21 that all V1 feedback was added, clearing Vinay's overdue V1 IR Design task and both VI CR Design tasks, and the team has now moved into V2 revisions due 7/22-7/23.",
+      "note": "Client confirmed V1 feedback was fully applied on 7/21; the team resolved all V2 copy feedback and moved the file to EXT review on 7/22, with V2/V3 milestones already queued in Asana.",
       "details": [
-        "7/21: Client confirmed via Slack that all V1 feedback has been added, closing out the 'Client Feedback Due - V1' milestone.",
-        "7/21: Vinay's previously overdue V1 IR Design task and both VI CR Design tasks (Vinay, Amori) were completed, along with the V1 Delivery task.",
-        "7/21: Ops bot sent 2h/4h reminders ahead of the V1 feedback deadline, prompting Estefania/Maria to confirm final files were sent to the client.",
-        "7/22: V2 IR Copy and V2 IR Design tasks are now due today, with V2 CR Design/Copy and V2 Delivery due 7/23, and Client Feedback Due - V2 due 7/24."
+        "7/21: Client confirmed via Slack that all V1 feedback has been added, closing out the 'Client Feedback Due - V1' milestone; Vinay's V1 IR Design and both VI CR Design tasks were completed.",
+        "7/22: Claire resolved all client-selected V2 copy feedback; Vinay shared the updated INT Figma file the same day for team review.",
+        "7/22: Amori approved the V2 file and moved it to EXT; team is discussing whether an L10 doc is needed for this project.",
+        "V2 IR/CR and V3 IR/CR tasks are already queued in Asana (due 7/23, 7/27-7/28), with Danielle Houston added to V2/V3 copy."
       ],
-      "last_activity": "2026-07-21",
+      "last_activity": "2026-07-22",
       "team": ["Maria", "Vinay", "Amori", "Estefania"]
     }
   ]
