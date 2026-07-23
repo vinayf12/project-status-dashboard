@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-22T20:15:18Z",
+  "updated_at": "2026-07-23T08:11:26Z",
   "projects": [
     {
       "project_number": "224533",
@@ -7,12 +7,12 @@
       "channel_name": "wex10-4-224533-cont-203818-10-4newclaims-paid",
       "display_name": "Wex — New Claims Paid",
       "status": "Waiting for Feedback",
-      "note": "Client's CTA/trademark feedback on Branded Ad03 was turned around same-day; Angelica sent the revised stills and V1/V2 videos back to customer review the evening of 7/22, now awaiting reply.",
+      "note": "Angelica sent Gerone's internally-approved V1/V2 revised Branded Ad03 videos back to customer review on 7/22 evening; the client left new comments on the V1 cut overnight, still unread by the team as of this sync.",
       "details": [
         "7/22 early morning: Client feedback returned on 'Branded Ad03.mp4' — add a 'Download Today' CTA plus app-store logos on the truck's back, and enlarge the TM mark on the '10-4 by WEX' billboard logo.",
-        "7/22 afternoon: Gerone turned around revised stills and two video versions (V1/V2) the same day; Leonardo approved internally ('these are great!!!').",
-        "7/22 evening: Juan Dupouy returned from PTO and offered to help; Angelica sent the updated V1/V2 assets back to customer review, now awaiting client reply.",
-        "7/20-7/21: Gerone Valenzuela Perez staffed as motion creative; first Branded Ad03 draft got internal approval and went to customer review 7/21."
+        "7/22 afternoon-evening: Gerone turned around revised stills and two video versions (V1/V2) the same day; Leonardo approved internally ('these are great!!!'), and Angelica sent V1/V2 back to customer review that evening.",
+        "7/23 (2:07am IST): Customer left new comments on the V1 cut of 'Branded Ad03' — flagged as unread; the team has not yet responded.",
+        "7/23: Automated Ops hours update shows 70.05% of best-estimate hours logged — no budget concern yet."
       ],
       "last_activity": "2026-07-22",
       "team": ["Juan", "Vinay", "Angelica", "Leonardo", "Gerone"]
@@ -23,12 +23,12 @@
       "channel_name": "strava-269357-whatsnewmaycarousel",
       "display_name": "Strava — What's New May Carousel",
       "status": "Stale",
-      "note": "Client Approval Due - F1 remains unanswered by the client nine days past its 7/13 deadline, and on 7/22 Ops separately flagged the project at 106.86% of its budgeted high estimate with no team response yet on how to proceed.",
+      "note": "Client Approval Due - F1 remains unanswered ten days past its 7/13 deadline, and the project stays flagged at 106.86% of its budgeted high estimate with no team decision yet on how to proceed.",
       "details": [
         "7/9: Creative Delivery 3 (EXT) was sent to the client and final Figma/exports were uploaded to Google Drive — the last substantive team activity before the channel went quiet.",
         "7/10: F1 Delivery task's internal QC (Amori) was completed, but the F1 Delivery task itself and 'Prepare final files for delivery' are still marked open in Asana despite the delivery having gone out.",
         "7/13: Client Approval Due - F1 milestone hit its deadline and the overdue flag fired; there has been zero client reply and zero Slack/Asana activity from the team since.",
-        "7/22: Ops posted an 'Action needed' alert that the project has crossed 106.86% of its high time estimate, asking Maria to rescope, escalate to the client, or close it out — no reply yet."
+        "7/22: Ops posted an 'Action needed' alert that the project has crossed 106.86% of its high time estimate, asking Maria to rescope, escalate to the client, or close it out — still no reply as of 7/23."
       ],
       "last_activity": "2026-07-22",
       "team": ["Amori", "Vinay", "Danielle", "Estefania"]
@@ -39,7 +39,7 @@
       "channel_name": "mitsubishi-218254-mitsubishipowerkeyvisual",
       "display_name": "Mitsubishi — Power Key Visual",
       "status": "Stale",
-      "note": "Client has now been silent for 15 days since the V2 KV deck was sent for review on 7/7, the team never followed up on its own 7/10 status check, and the project has since blown past its high time estimate with no rescope/escalation decision made.",
+      "note": "Client has now been silent for 16 days since the V2 KV deck was sent for review on 7/7, and the project remains over its high time estimate (110.64%) with no rescope/escalation decision made.",
       "details": [
         "7/7: Emanuele sent the [EXT] KV Presentation V2 deck to customer review; no client reply has been logged since.",
         "7/10: Automated ops reminder asked the team whether final files had been sent to the client — went unanswered, and the channel had zero human messages for the next 12 days.",
@@ -54,15 +54,15 @@
       "channel_id": "C0A3TCY3W8Y",
       "channel_name": "oysterhr-i-199961-brandassetlibrary",
       "display_name": "OysterHR — Brand Asset Library",
-      "status": "Stale",
-      "note": "15 days of unbroken silence since the 7/7 'client reviewing in detail' update continue with no debrief date set, and a new 7/22 automated alert shows 79.99% of best-estimate hours already logged against the stalled work.",
+      "status": "Waiting for Feedback",
+      "note": "Bradley broke 16 days of channel silence on 7/23 with a fresh check-in confirming the project remains awaiting customer feedback; no debrief date has been set and 79.99% of best-estimate hours are already logged.",
       "details": [
         "7/7: Bradley Ford relayed that the client is happy with the initial setup and reviewing it in more detail, and will provide further instructions once ready to debrief Superside — no date given.",
-        "7/22: An automated Ops 'Hours update' flagged that 79.99% of best-estimate hours have been logged on the project, the only channel activity since 7/7 and not a client/team update.",
-        "No Asana records found for this project (search for \"199961\" and \"OysterHR\" returned nothing) — consistent with prior syncs.",
-        "Channel is still active/accessible (not archived or left); core team Amori, Vinay, Pablo, and Maria remain in the channel with no departures."
+        "7/22: An automated Ops 'Hours update' flagged that 79.99% of best-estimate hours have been logged on the project — the only channel activity since 7/7 until this sync.",
+        "7/23: Bradley Ford posted a fresh status check-in — 'Update: Customer to provide feedback' — the first human message in the channel since 7/7.",
+        "No Asana records found for this project (search for \"199961\" and \"OysterHR\" returned nothing) — consistent with prior syncs."
       ],
-      "last_activity": "2026-07-07",
+      "last_activity": "2026-07-23",
       "team": ["Amori", "Vinay", "Pablo", "Maria"]
     },
     {
@@ -70,15 +70,15 @@
       "channel_id": "C0B98MTJWNL",
       "channel_name": "strava-256899-juneorganicsocialcarousels",
       "display_name": "Strava — June Organic Social Carousels",
-      "status": "Waiting for Feedback",
-      "note": "Client feedback from Jane Koo contradicted the prior creative direction on the LA/NY hiking carousels, so the team paused design revisions on those until Jane delivers an updated design template (expected 7/23), while feedback on the Runner-to-Lifter and Summer Sports carousels came through and can proceed.",
+      "status": "In Progress",
+      "note": "Client narrowed scope on 7/22 evening — hold the hiking carousels until August and just wrap up the Runner-to-Lifter and Summer Sports posts to close the project out — and the team is now actively pushing toward an F1 delivery due 7/24, with an L10 doc queued and open Figma comments being resolved today.",
       "details": [
-        "7/20: Team delivered Creative Delivery 7 (EXT) with Types of Lifter exports and LA/NY hiking carousel copy; the LA/NY CR Design tasks (Amori, Vinay) went overdue awaiting client direction.",
-        "7/21: Amori flagged that Jane Koo's new comments contradict the original creative direction; Maria agreed the team should raise this with the client to align on clearer feedback rounds going forward.",
-        "7/22: Feedback came in on Runner-to-Lifter and Summer Sports carousels, and copy feedback landed on the LA/NY hiking carousels, but Maria told the team to hold off on hiking-carousel design revisions until Jane shares an updated design template, expected 7/23.",
-        "7/22: Claire raised an unresolved scope ambiguity on the NY carousel (1 club vs 3 clubs); Maria is following up with the client for clarification before adding new milestones."
+        "7/22 evening: Client returned new direction via Maria — leave the hiking carousels out of final deliverables and revisit in August pending PMM route confirmation; just wrap up the Runner-to-Lifter pipeline and Summer Sports posts, then close the project out.",
+        "7/22 evening: Claire had flagged unresolved copy feedback affecting the week 3 SF hiking carousel just before the client's scope-narrowing message landed, mooting that thread.",
+        "7/22 late night → 7/23: Asana updated with 'Prepare final files for delivery' and 'Quality internal review - F1' due 7/23 14:00 UTC, F1 Delivery milestone due 7/24 19:00 UTC, and a new 'L10 Doc' task assigned to Claire; Maria plans to send by Friday for a final IR review if needed.",
+        "7/23: Vinay is actively following up with Amori/Claire on an unresolved Figma comment thread to keep the final delivery on track."
       ],
-      "last_activity": "2026-07-22",
+      "last_activity": "2026-07-23",
       "team": ["Amori", "Vinay", "Danielle", "Estefania"]
     },
     {
@@ -87,7 +87,7 @@
       "channel_name": "tomtom-234532-lifestyleimagesfortomtomcommunity",
       "display_name": "TomTom — Lifestyle Images for Community",
       "status": "In Progress",
-      "note": "Client approved the delivered finals on 7/20, but the project has now exceeded its high time estimate (121.6%) and the team is scoping additional billable scope to begin 1 August rather than closing out.",
+      "note": "Client approved the delivered finals on 7/20, but the project has exceeded its high time estimate (121.6%) and the team is scoping additional billable scope to begin 1 August rather than closing out.",
       "details": [
         "7/17: Final exports and EXT presentation (Exports.zip) uploaded and sent to the customer for review.",
         "7/20: Customer Brittney Malpeli approved the delivered finals (Exports.zip); Windy reminded to log remaining 2hrs QC time.",
@@ -103,7 +103,7 @@
       "channel_name": "lucidmotor-252603-bookademopaidads",
       "display_name": "Lucid Motors — Book a Demo Paid Ads",
       "status": "Stale",
-      "note": "Client remains unresponsive nearly a month after citing layoffs on 6/23, and the project has now blown past its high time estimate (146.70%) with no Asana records to reference, forcing an internal decision on rescoping, flagging the client, or closing the job out.",
+      "note": "Client remains unresponsive a full month after citing layoffs on 6/23, and the project stays flagged at 146.70% of its high time estimate with no Asana records to reference, still awaiting an internal decision on rescoping, flagging the client, or closing the job out.",
       "details": [
         "6/18: Angeles Buitron sent the final Book a Demo Paid Ads assets to customer review after the internal team signed off.",
         "6/23: Client POC canceled the weekly check-in citing a fresh round of layoffs, promising copy feedback by end of week — no reply has come since.",
@@ -119,7 +119,7 @@
       "channel_name": "lucidmotor-252620-generalawarenesspaidads",
       "display_name": "Lucid Motors — General Awareness Paid Ads",
       "status": "Stale",
-      "note": "Client contact has now gone silent for a full 5 weeks since the 6/19 deliverable was sent — the internal team confirmed on 7/20 there's still no word back, and an automated ops alert on 7/22 flagged that 76.55% of the best-estimate hours have already been burned on a project that remains stalled awaiting client feedback.",
+      "note": "Client contact has now gone silent for over 5 weeks since the 6/19 deliverable was sent — the internal team confirmed on 7/20 there's still no word back, and an automated ops alert on 7/22 flagged that 76.55% of the best-estimate hours have already been burned on a project that remains stalled awaiting client feedback.",
       "details": [
         "7/20: PM Angeles Buitron told the team (Chris, Karen, and others) 'no updates on the project just yet' and would keep everyone posted — client POC still unresponsive.",
         "7/22: Automated Ops hours-tracking alert flagged 76.55% of best-estimate hours logged on the project, notable since work is stalled pending client review, not active production.",
@@ -135,7 +135,7 @@
       "channel_name": "dynaparcor-201583-spt-tracmileproductlaunchimageassets",
       "display_name": "Dynapar — Product Launch Image Assets",
       "status": "Stale",
-      "note": "Project remains on hold with no resumption update from Monise since her return from PTO on 7/13 (now 9 days of silence), and the only new signal in the channel is an automated alert that 85.70% of best-estimate hours have already been logged.",
+      "note": "Project remains on hold with no resumption update from Monise since her return from PTO on 7/13 (now 10 days of silence), and the only new signal in the channel is an automated alert that 85.70% of best-estimate hours have already been logged.",
       "details": [
         "6/30: Monise posted an OOO notice (June 30 - July 13) asking the team to tag Benitta in her absence; no substantive project update was given.",
         "7/13: Monise's OOO window ended; no resumption update, client check-in, or work status has been posted in the channel since her return.",
@@ -150,13 +150,13 @@
       "channel_id": "C0BGWNGVCN9",
       "channel_name": "strava-292674-garmin-remindmelater-retargeting-ftue-creativeresourcing",
       "display_name": "Strava — Garmin Remind Me Later Retargeting FTUE",
-      "status": "In Progress",
-      "note": "Client confirmed V1 feedback was fully applied on 7/21; the team resolved all V2 copy feedback and moved the file to EXT review on 7/22, with V2/V3 milestones already queued in Asana.",
+      "status": "Waiting for Feedback",
+      "note": "Client fully approved Draft 2 on 7/22 with no further comments and handed the file off to Garmin for review — an external stakeholder whose feedback may take longer to arrive — so the team paused V3 work (deadlines cleared) while queuing a Final Exports task and an L10 doc.",
       "details": [
-        "7/21: Client confirmed via Slack that all V1 feedback has been added, closing out the 'Client Feedback Due - V1' milestone; Vinay's V1 IR Design and both VI CR Design tasks were completed.",
-        "7/22: Claire resolved all client-selected V2 copy feedback; Vinay shared the updated INT Figma file the same day for team review.",
-        "7/22: Amori approved the V2 file and moved it to EXT; team is discussing whether an L10 doc is needed for this project.",
-        "V2 IR/CR and V3 IR/CR tasks are already queued in Asana (due 7/23, 7/27-7/28), with Danielle Houston added to V2/V3 copy."
+        "7/22: Claire resolved all client-selected V2 copy feedback; Vinay shared the updated INT Figma file the same day, and Amori approved it and moved it to EXT.",
+        "7/22 evening: Maria confirmed the client loved Draft 2 with no more comments and is handing it off to Garmin, so further feedback may take longer to arrive.",
+        "7/22 evening: Maria removed the previously-queued V3 IR/CR tasks since there's no clear direction yet, and created 'Final Exports' and 'L10 Doc' (assigned to Claire) tasks instead — all with deadlines pending.",
+        "Asana project remains 'Ongoing' with 12 of 31 tasks still incomplete; V2 IR/CR tasks are complete."
       ],
       "last_activity": "2026-07-22",
       "team": ["Maria", "Vinay", "Amori", "Estefania"]
