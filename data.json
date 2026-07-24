@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-23T08:11:26Z",
+  "updated_at": "2026-07-24T08:11:42Z",
   "projects": [
     {
       "project_number": "224533",
@@ -7,31 +7,15 @@
       "channel_name": "wex10-4-224533-cont-203818-10-4newclaims-paid",
       "display_name": "Wex — New Claims Paid",
       "status": "Waiting for Feedback",
-      "note": "Angelica sent Gerone's internally-approved V1/V2 revised Branded Ad03 videos back to customer review on 7/22 evening; the client left new comments on the V1 cut overnight, still unread by the team as of this sync.",
+      "note": "Gerone addressed the client's overnight V1 comments with an updated 'Branded Ad03 2' cut; Leonardo approved it internally and Angelica sent it back to customer review on 7/23 evening — awaiting client response as of this sync.",
       "details": [
-        "7/22 early morning: Client feedback returned on 'Branded Ad03.mp4' — add a 'Download Today' CTA plus app-store logos on the truck's back, and enlarge the TM mark on the '10-4 by WEX' billboard logo.",
-        "7/22 afternoon-evening: Gerone turned around revised stills and two video versions (V1/V2) the same day; Leonardo approved internally ('these are great!!!'), and Angelica sent V1/V2 back to customer review that evening.",
-        "7/23 (2:07am IST): Customer left new comments on the V1 cut of 'Branded Ad03' — flagged as unread; the team has not yet responded.",
-        "7/23: Automated Ops hours update shows 70.05% of best-estimate hours logged — no budget concern yet."
+        "7/23 (2:07am IST): Customer left new comments on the V1 cut of 'Branded Ad03' overnight — initially unread by the team.",
+        "7/23 (5:33pm IST): Gerone uploaded an updated cut ('Branded Ad03 2.mp4') addressing the client's comments; Leonardo reviewed and internally approved it at 5:44pm ('good to share').",
+        "7/23 (9:30pm IST): Angelica sent the revised cut back to customer review; no client reply logged yet.",
+        "7/23: Automated Ops hours update showed 70.05% of best-estimate hours logged — no budget concern."
       ],
-      "last_activity": "2026-07-22",
+      "last_activity": "2026-07-23",
       "team": ["Juan", "Vinay", "Angelica", "Leonardo", "Gerone"]
-    },
-    {
-      "project_number": "269357",
-      "channel_id": "C0BBPP6V2Q0",
-      "channel_name": "strava-269357-whatsnewmaycarousel",
-      "display_name": "Strava — What's New May Carousel",
-      "status": "Stale",
-      "note": "Client Approval Due - F1 remains unanswered ten days past its 7/13 deadline, and the project stays flagged at 106.86% of its budgeted high estimate with no team decision yet on how to proceed.",
-      "details": [
-        "7/9: Creative Delivery 3 (EXT) was sent to the client and final Figma/exports were uploaded to Google Drive — the last substantive team activity before the channel went quiet.",
-        "7/10: F1 Delivery task's internal QC (Amori) was completed, but the F1 Delivery task itself and 'Prepare final files for delivery' are still marked open in Asana despite the delivery having gone out.",
-        "7/13: Client Approval Due - F1 milestone hit its deadline and the overdue flag fired; there has been zero client reply and zero Slack/Asana activity from the team since.",
-        "7/22: Ops posted an 'Action needed' alert that the project has crossed 106.86% of its high time estimate, asking Maria to rescope, escalate to the client, or close it out — still no reply as of 7/23."
-      ],
-      "last_activity": "2026-07-22",
-      "team": ["Amori", "Vinay", "Danielle", "Estefania"]
     },
     {
       "project_number": "218254",
@@ -44,6 +28,7 @@
         "7/7: Emanuele sent the [EXT] KV Presentation V2 deck to customer review; no client reply has been logged since.",
         "7/10: Automated ops reminder asked the team whether final files had been sent to the client — went unanswered, and the channel had zero human messages for the next 12 days.",
         "7/22: Ops flagged that the project hit 110.64% of its high estimate (over budget) and asked Emanuele to decide next steps (rescope, flag to client, or close out); no response yet as of this sync.",
+        "7/23 (8:31pm IST): A further Ops 'due in 24 hours' reminder fired to Carolina Piedrahita, Estefania Katase, and Emanuele Mazoni — still no team or client response as of this sync.",
         "No Asana records found for this project (search for \"218254\" and \"Mitsubishi\" returned nothing) — consistent with prior syncs."
       ],
       "last_activity": "2026-07-07",
@@ -71,14 +56,14 @@
       "channel_name": "strava-256899-juneorganicsocialcarousels",
       "display_name": "Strava — June Organic Social Carousels",
       "status": "In Progress",
-      "note": "Client narrowed scope on 7/22 evening — hold the hiking carousels until August and just wrap up the Runner-to-Lifter and Summer Sports posts to close the project out — and the team is now actively pushing toward an F1 delivery due 7/24, with an L10 doc queued and open Figma comments being resolved today.",
+      "note": "F1 Delivery milestone (due 7/24) is still open — Creative Delivery 8 (EXT) went out 7/23 evening, meme copy/emoji options are queued for client sign-off on the Summer Sports posts, and Vinay added new one-character-journey carousel imagery on 7/24 morning that Amori is now reviewing.",
       "details": [
-        "7/22 evening: Client returned new direction via Maria — leave the hiking carousels out of final deliverables and revisit in August pending PMM route confirmation; just wrap up the Runner-to-Lifter pipeline and Summer Sports posts, then close the project out.",
-        "7/22 evening: Claire had flagged unresolved copy feedback affecting the week 3 SF hiking carousel just before the client's scope-narrowing message landed, mooting that thread.",
-        "7/22 late night → 7/23: Asana updated with 'Prepare final files for delivery' and 'Quality internal review - F1' due 7/23 14:00 UTC, F1 Delivery milestone due 7/24 19:00 UTC, and a new 'L10 Doc' task assigned to Claire; Maria plans to send by Friday for a final IR review if needed.",
-        "7/23: Vinay is actively following up with Amori/Claire on an unresolved Figma comment thread to keep the final delivery on track."
+        "7/23 evening: Creative Delivery 8 (EXT) sent to the client; Amori simplified meme headline/emoji options for Claire and Danielle to sense-check, with the middle option a favorite pending a headline tweak.",
+        "7/23 evening: 'IR Prepare final files for delivery,' 'IR Quality internal review - F1,' and 'L10 Doc' Asana tasks went overdue (due 7/23); Claire confirmed no L10 doc is needed for social posts, and Maria/Amori agreed to finish final files once the client confirms the Summer Sports copy.",
+        "7/24 morning: Vinay added new one-character-journey imagery (same model across shots, sourced from brand stock) to a carousel; Amori thanked him and is reviewing.",
+        "F1 Delivery milestone remains due 7/24 in Asana and is still incomplete as of this sync — 8 of 44 project tasks remain open."
       ],
-      "last_activity": "2026-07-23",
+      "last_activity": "2026-07-24",
       "team": ["Amori", "Vinay", "Danielle", "Estefania"]
     },
     {
