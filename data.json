@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-24T20:10:27Z",
+  "updated_at": "2026-07-25T08:08:38Z",
   "projects": [
     {
       "project_number": "224533",
@@ -55,12 +55,12 @@
       "channel_name": "strava-256899-juneorganicsocialcarousels",
       "display_name": "Strava — June Organic Social Carousels",
       "status": "In Progress",
-      "note": "F1 Delivery milestone (due 7/24) went overdue with no client comments or approval yet on Creative Delivery 8, but the team kept working — Vinay added new one-character-journey carousel imagery and Amori folded it into an updated D8 creative on 7/24 evening.",
+      "note": "F1 Delivery milestone (due 7/24) officially went overdue per an automated alert just after midnight on 7/25, with no client comments or approval yet on Creative Delivery 8 — but the team kept working: Vinay added new one-character-journey carousel imagery and Amori folded it into an updated D8 creative on 7/24 evening.",
       "details": [
         "7/23 evening: Creative Delivery 8 (EXT) sent to the client; Amori simplified meme headline/emoji options for Claire and Danielle to sense-check, with the middle option a favorite pending a headline tweak.",
         "7/24 morning: Vinay added new one-character-journey imagery (same model across shots, sourced from brand stock) to a carousel; Amori thanked him and reviewed.",
         "7/24 evening: With no client comments or approval received, Maria confirmed she'd follow up with the client and move on to preparing exports; Amori updated the creative (D8) with the updated lifter stages the same evening.",
-        "F1 Delivery milestone (due 7/24) went overdue per Asana; 'IR Prepare final files for delivery,' 'IR Quality internal review - F1,' and 'L10 Doc' tasks remain open (overdue since 7/23) — 8 of 44 project tasks remain open."
+        "F1 Delivery milestone (due 7/24 19:00 UTC) was flagged overdue by an automated Asana alert shortly after midnight IST on 7/25; per Asana, 8 of 44 project tasks remain open, including 'IR Prepare final files for delivery,' 'IR Quality internal review - F1,' and 'L10 Doc' (all overdue since 7/23)."
       ],
       "last_activity": "2026-07-24",
       "team": ["Amori", "Vinay", "Danielle", "Estefania"]
