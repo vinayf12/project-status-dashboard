@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-24T08:11:42Z",
+  "updated_at": "2026-07-24T20:10:27Z",
   "projects": [
     {
       "project_number": "224533",
@@ -23,15 +23,14 @@
       "channel_name": "mitsubishi-218254-mitsubishipowerkeyvisual",
       "display_name": "Mitsubishi — Power Key Visual",
       "status": "Stale",
-      "note": "Client has now been silent for 16 days since the V2 KV deck was sent for review on 7/7, and the project remains over its high time estimate (110.64%) with no rescope/escalation decision made.",
+      "note": "Client has now been silent for 17 days since the V2 KV deck was sent for review on 7/7; ops fired a further overdue reminder on 7/24 (met only with an \"x\" reaction), and the project remains over its high time estimate (110.64%) with no rescope/escalation decision made.",
       "details": [
         "7/7: Emanuele sent the [EXT] KV Presentation V2 deck to customer review; no client reply has been logged since.",
-        "7/10: Automated ops reminder asked the team whether final files had been sent to the client — went unanswered, and the channel had zero human messages for the next 12 days.",
         "7/22: Ops flagged that the project hit 110.64% of its high estimate (over budget) and asked Emanuele to decide next steps (rescope, flag to client, or close out); no response yet as of this sync.",
-        "7/23 (8:31pm IST): A further Ops 'due in 24 hours' reminder fired to Carolina Piedrahita, Estefania Katase, and Emanuele Mazoni — still no team or client response as of this sync.",
+        "7/23 (8:31pm IST) and 7/24 (6:31pm IST): Ops fired further \"final files sent to client?\" reminders to Carolina Piedrahita, Estefania Katase, and Emanuele Mazoni — the 7/24 one was met only with an \"x\" reaction, no substantive team or client response.",
         "No Asana records found for this project (search for \"218254\" and \"Mitsubishi\" returned nothing) — consistent with prior syncs."
       ],
-      "last_activity": "2026-07-07",
+      "last_activity": "2026-07-24",
       "team": ["Windy", "Vinay", "Estefania", "Sam"]
     },
     {
@@ -56,12 +55,12 @@
       "channel_name": "strava-256899-juneorganicsocialcarousels",
       "display_name": "Strava — June Organic Social Carousels",
       "status": "In Progress",
-      "note": "F1 Delivery milestone (due 7/24) is still open — Creative Delivery 8 (EXT) went out 7/23 evening, meme copy/emoji options are queued for client sign-off on the Summer Sports posts, and Vinay added new one-character-journey carousel imagery on 7/24 morning that Amori is now reviewing.",
+      "note": "F1 Delivery milestone (due 7/24) went overdue with no client comments or approval yet on Creative Delivery 8, but the team kept working — Vinay added new one-character-journey carousel imagery and Amori folded it into an updated D8 creative on 7/24 evening.",
       "details": [
         "7/23 evening: Creative Delivery 8 (EXT) sent to the client; Amori simplified meme headline/emoji options for Claire and Danielle to sense-check, with the middle option a favorite pending a headline tweak.",
-        "7/23 evening: 'IR Prepare final files for delivery,' 'IR Quality internal review - F1,' and 'L10 Doc' Asana tasks went overdue (due 7/23); Claire confirmed no L10 doc is needed for social posts, and Maria/Amori agreed to finish final files once the client confirms the Summer Sports copy.",
-        "7/24 morning: Vinay added new one-character-journey imagery (same model across shots, sourced from brand stock) to a carousel; Amori thanked him and is reviewing.",
-        "F1 Delivery milestone remains due 7/24 in Asana and is still incomplete as of this sync — 8 of 44 project tasks remain open."
+        "7/24 morning: Vinay added new one-character-journey imagery (same model across shots, sourced from brand stock) to a carousel; Amori thanked him and reviewed.",
+        "7/24 evening: With no client comments or approval received, Maria confirmed she'd follow up with the client and move on to preparing exports; Amori updated the creative (D8) with the updated lifter stages the same evening.",
+        "F1 Delivery milestone (due 7/24) went overdue per Asana; 'IR Prepare final files for delivery,' 'IR Quality internal review - F1,' and 'L10 Doc' tasks remain open (overdue since 7/23) — 8 of 44 project tasks remain open."
       ],
       "last_activity": "2026-07-24",
       "team": ["Amori", "Vinay", "Danielle", "Estefania"]
