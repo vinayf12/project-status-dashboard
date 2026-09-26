@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11T08:32:00Z",
+  "updated_at": "2026-09-26T08:15:00Z",
   "projects": [
     {
       "project_number": "224533",
@@ -7,12 +7,12 @@
       "channel_name": "wex10-4-224533-cont-203818-10-4newclaims-paid",
       "display_name": "Wex — New Claims Paid",
       "status": "Stale",
-      "note": "Silence since Angelica's 8/8 question went unanswered; only a minor client email-bug touched the project on 8/27, and by 9/10 the project's Slack channel itself had gone dark (access revoked, now unreadable), with still no Asana record of the work.",
+      "note": "No change since last sync — Slack channel remains inaccessible and Asana still has no project record; last confirmed activity is still the 8/27 email-notification bug report.",
       "details": [
-        "8/8 (5:10am IST): Angelica's question to Leonardo/Gerone (motion-stage fix vs. full AI regenerate) was never answered in the channel, and no update ever surfaced on the second resize awaiting client confirmation.",
-        "8/27 (4:18am IST): Angelica flagged a client-side bug in #support-product (project 224533 — client contact not receiving platform email notifications); TPD Support triaged it, but this was a platform issue, not creative progress, and no creative follow-up came after it.",
-        "9/10 (7:27pm IST): Slack removed Vinay from #wex10-4-224533-cont-203818-10-4newclaims-paid ('removed by Operations Team'), and the channel now returns channel_not_found — it could not be read for this sync. The same bot removed Vinay from two unrelated project channels on 9/8-9/9, so this may be routine cleanup rather than a project-specific closure signal, but it does confirm no visible channel activity in the intervening month.",
-        "As of today, Asana search (by project number 224533 and by name Wex/New Claims Paid) still returns no project or tasks — the project remains untracked in Asana, only in Superside's internal ops platform."
+        "Slack channel C0AUNGM22DQ (wex10-4-224533-cont-203818-10-4newclaims-paid) returned 'channel_not_found' on read attempt (2026-09-26) — still unreadable/inaccessible, same as prior 9/10 finding; a channel-name search also returned zero matches, confirming it's not just renamed.",
+        "Cross-channel Slack search for '224533' / 'Wex New Claims Paid' found no messages newer than 2026-08-27 04:17 IST (#support-product bug thread: client not receiving email notifications, reported by Angelica Solis, resolved via standard spam/whitelist troubleshooting guidance — same event noted in prior sync).",
+        "No other project mentions after 8/27; most recent legitimate Ops brief-landed notifications for project 224533 (Digital Graphics/Motion Design components) date to 2026-08-06, well before the current sync window.",
+        "Asana: search for '224533' and 'Wex New Claims Paid' (both project and task search) all returned zero results — still no Asana project or task record exists for this work."
       ],
       "last_activity": "2026-09-10",
       "team": ["Juan", "Vinay", "Angelica", "Leonardo", "Gerone"]
@@ -22,13 +22,13 @@
       "channel_id": "C0ASNGC7AUV",
       "channel_name": "mitsubishi-218254-mitsubishipowerkeyvisual",
       "display_name": "Mitsubishi — Power Key Visual",
-      "status": "In Progress",
-      "note": "The Key Visual won final client approval around 8/31-9/8 (confirmed by returning PM Emanuele on 9/8), and with Rafael now handling creative delivery, focus has shifted to scoping a 3D rebuild of the gas turbine asset for future scaling; the August budget/hours ticket was resolved by 8/10.",
+      "status": "Stale",
+      "note": "Key Visual deliverable was approved by the client on 8/28 and celebrated on 9/8, but the flagged next phase (3D gas turbine rebuild scoping) has shown zero visible activity since, with no Asana record ever created to track it.",
       "details": [
-        "8/10 (12:17pm IST): Estefania confirmed she was able to set up the additional budget hours flagged in Emanuele's 8/7 PTO handover ticket, asking the team to accept the roles so they could log time — resolving that blocker.",
-        "8/14-8/24: Client gave very positive feedback on the gas turbine KV (\"beautiful,\" \"simple,\" praised the 4-part split and bolt circles); Rafael joined the project 8/14 to take over creative work from Vinay (who went on PTO 8/17-8/26) and delivered final PSD/PPT assets, sent to customer review 8/21.",
-        "8/25 (3:09pm IST) & 8/28 (7:02pm IST): Sam Mac asked if 3D support was still needed; Estefania/Stefany said the 3D asset was discarded for now but flagged that once the KV is approved, the gas turbine needs a 3D rebuild to scale across print/static/motion (currently digital-only) — Stefany opened an incubator submission to scope cost/timeline, noting the client's contract runs through Oct 30.",
-        "8/31-9/8: Team celebrated final approval (Estefania: \"Great work, team!\" on 8/31; Emanuele, back from PTO, posted 9/8: \"Omg I can't believe we have this one approved\"). No Asana records found for this project (searched \"218254\", \"Mitsubishi\", \"Power Key Visual\", and task-level search — all returned nothing), consistent with prior syncs."
+        "2026-08-21: Rafael Vecchio delivered final PSD/PPT/transparent-PNG exports; Estefania sent asset to customer review same day.",
+        "2026-08-28 (18:35 IST): Customer (Alex Misrahi) formally approved '218254-Superside x Mitsubishi-KV Deliverables.zip'.",
+        "2026-09-08: Emanuele Mazoni posted final celebratory message confirming approval ('Omg I can't believe we have this one approved') — last message in the channel; zero messages since across a full check through 2026-09-26.",
+        "No Asana project/task found for '218254', 'Mitsubishi', 'Power Key Visual', or 'gas turbine 3D' — the 3D scoping work mentioned in the prior sync has not visibly progressed or been logged anywhere."
       ],
       "last_activity": "2026-09-08",
       "team": ["Windy", "Vinay", "Estefania", "Emanuele", "Rafael", "Sam"]
@@ -39,14 +39,14 @@
       "channel_name": "oysterhr-i-199961-brandassetlibrary",
       "display_name": "OysterHR — Brand Asset Library",
       "status": "Stale",
-      "note": "Bradley marked the project \"paused until further notice\" on 9/9 after roughly a month of dead air — the 7/30-31 \"final files sent to client?\" reminders repeated unanswered on 8/30-31, and Bradley's 8/15 note that the customer would \"brief Superside\" never led anywhere before the pause; still no direct word from Claudia/Nico, and no Asana records exist for this project.",
+      "note": "Project remains paused with no client input from Claudia/Nico; Bradley confirmed on 9/24 there's still nothing to action.",
       "details": [
-        "9/9 (2:45pm IST): Bradley posted \"Update: Project paused until further notice\" (2 checked reactions) — the first substantive post since 8/15, with no client contact in between.",
-        "8/30 (8:30pm IST) & 8/31 (6:30pm IST): Ops fired 24h/2h \"have the final files been sent to client?\" reminders to Bradley/Maria/Tamara — same as the unanswered 7/30-31 reminders, again no reply logged.",
-        "8/15 (2:56pm IST): Bradley posted \"Update: Customer to brief Superside\" — no briefing or further client-side movement followed; Tamara Dalhuijsen joined the channel 8/14 but has not posted.",
-        "8/3: Amori held off on proactive work pending Claudia's look-and-feel preference and Bradley checked in with no new client movement (per prior sync) — channel then went quiet until the 9/9 pause; Asana search for \"199961\", \"OysterHR\", and \"Brand Asset Library\" again returned no records."
+        "2026-09-09 (2:45pm IST): Bradley Ford posted 'Project paused until further notice' (3 checked reactions) — same pause first noted in prior sync.",
+        "8/3 (per prior sync): Amori flagged she's hesitant to do work before getting Claudia's look-and-feel preference — this blocker was never resolved in visible history.",
+        "2026-09-24 (2:58am IST, most recent message): Bradley Ford posted 'Update: Nothing to action, no need to follow-up on this project,' cc'ing Maria and Pablo — confirms continued dead air 15 days after the pause note, no word from client.",
+        "Asana search for '199961', 'OysterHR', and 'Brand Asset Library' returned zero results — no Asana project/task records exist, consistent with prior sync."
       ],
-      "last_activity": "2026-09-09",
+      "last_activity": "2026-09-24",
       "team": ["Amori", "Vinay", "Pablo", "Maria", "Bradley"]
     },
     {
@@ -55,14 +55,14 @@
       "channel_name": "strava-256899-juneorganicsocialcarousels",
       "display_name": "Strava — June Organic Social Carousels",
       "status": "Stale",
-      "note": "Still closed in Asana since 8/3; Slack channel confirmed gone (not just archived — absent even from archived search); the one \"open\" task is a recurring QC-recheck template that keeps auto-completing and regenerating itself with no human action, so there's no real outstanding work, but this dashboard still lacks a \"Completed\" bucket.",
+      "note": "Project remains Closed in Asana (since 8/3) with a vanished Slack channel; only 'open' item is the same auto-regenerating QC-recheck template producing no real work — unchanged from prior sync aside from the phantom task's routine churn.",
       "details": [
-        "9/11: Slack channel #strava-256899-juneorganicsocialcarousels still returns channel_not_found, and a channel search (including archived) finds no match at all — confirms it's gone, not merely archived.",
-        "9/11: Asana project 256899 remains status \"Completed\" / \"Closed on 3 Aug 2026\"; task count now 51 of 52 done (up from 46/47 last sync) because the recurring \"Strava | IR Quality internal review - F1\" task keeps auto-regenerating and getting auto-completed (7/27, 7/30, 8/14, 8/20, 8/27, 9/2, 9/10) with a fresh instance now open due 9/16 — this is template scaffolding, not active project work.",
-        "7/22: In the broader #int-strava Slack channel, Danielle asked about a possible next batch of organic social carousels for Strava (referencing performance learnings from 256899); as of 9/11 no new brief/project has materialized under this project number, so nothing indicates 256899 itself has reopened.",
-        "Flagging again for review: dashboard schema still has no \"Completed\" status option, so this closed/archived project continues to show as Stale."
+        "Asana project #256899: completed=true, completed_at=2026-08-03, current_status='Completed' ('Closed on 3 Aug 2026'); 53/54 tasks complete.",
+        "Slack channel C0B98MTJWNL still returns channel_not_found on direct read; a channel-name search (including archived) returns zero results — confirms it's gone, not merely archived.",
+        "Recurring task 'Strava | IR Quality internal review - F1' (Amori) auto-completed and regenerated again most recently on 2026-09-25, spawning a new instance due 2026-09-30 — same self-perpetuating pattern as at prior sync, no human-driven deliverable work.",
+        "Flagging again for review: dashboard schema still has no 'Completed' status option, so this closed/archived project continues to show as Stale."
       ],
-      "last_activity": "2026-09-10",
+      "last_activity": "2026-09-25",
       "team": ["Amori", "Vinay", "Danielle", "Estefania", "Maria", "Claire"]
     },
     {
@@ -71,12 +71,12 @@
       "channel_name": "tomtom-234532-lifestyleimagesfortomtomcommunity",
       "display_name": "TomTom — Lifestyle Images for Community",
       "status": "Stale",
-      "note": "Project appears fully closed out: the dedicated Slack channel was archived/team removed by Superside Ops on 9/2 (consistent with Bradley's planned closure request going through after Pablo logged his PM hours), and no further activity or Asana record exists since.",
+      "note": "Project remains fully closed out since early September; Slack channel is still inaccessible and no Asana record exists.",
       "details": [
-        "8/7: Per prior sync, client approved all final images with Bradley confirming \"Project is approved. No additional changes required\"; only remaining step was Pablo Deniz logging his PM hours (back from vacation) so Bradley could request formal closure.",
-        "9/2 (~5:30pm IST): Vinay was removed from #tomtom-234532-lifestyleimagesfortomtomcommunity by the Operations Team bot — Superside's standard signal that a project channel has been archived following closure.",
-        "As of 9/11, Slack tool calls to channel C0B1P9QG830 return channel_not_found, matching the archival event; no messages referencing project 234532 or \"Lifestyle Images for TomTom Community\" appear in Slack after 9/2.",
-        "Asana search (by project number 234532, \"TomTom\", and \"Lifestyle Images\") returned no matching project or tasks — this account is tracked in Superside's internal ops platform, not the connected Asana workspace, so no additional status cross-check was available there."
+        "Direct read of Slack channel C0B1P9QG830 still returns 'channel_not_found' — confirms it remains archived/inaccessible as of 2026-09-26.",
+        "Slack search of #int-tomtom shows the final cost-reconciliation thread on project 234532: Bradley Ford (9/1, 4:12pm IST) said 'We can move ahead with closing,' and Pablo Deniz replied 'done' on 9/2 (11:01pm IST) — this is the last confirmed activity on the project.",
+        "Prior bi-weekly account update (8/7) had already flagged client confirmation of closure pending AM approval — consistent with the closure that completed 9/2.",
+        "Asana search ('234532', 'TomTom Lifestyle Images') returned zero results — no accessible Asana project or task record found, matching the prior sync's finding."
       ],
       "last_activity": "2026-09-02",
       "team": ["Windy", "Vinay", "Estefania", "Margot"]
@@ -87,12 +87,12 @@
       "channel_name": "lucidmotor-252603-bookademopaidads",
       "display_name": "Lucid Motors — Book a Demo Paid Ads",
       "status": "Stale",
-      "note": "No confirmed movement since Angeles' 8/5 close-out announcement — the project channel itself is now unreachable (channel_not_found, not even listed as archived) and no newer mentions of 252603/Lucid Book a Demo Paid Ads surfaced anywhere in Slack, so it's unclear whether GM approval to formally close ever came through.",
+      "note": "No new activity found since the 8/5 close-out; project channel remains unreachable and no fresh mentions of 252603 surfaced anywhere.",
       "details": [
-        "8/5 (5:49am IST): Angeles Buitron last confirmed the project was moving to close-out pending GM approval — \"No action needed here\" (unchanged from prior sync).",
-        "9/11: Slack channel C0B6AL0T10T (lucidmotor-252603-bookademopaidads) returns channel_not_found on read and does not appear in channel search at all (not even as archived), so no post-8/5 activity could be verified directly in-channel.",
-        "9/11: Workspace-wide Slack search for \"252603\", \"Lucid Motors\", and \"bookademopaidads\" turns up no messages referencing this project after 6/18, aside from the already-known 8/5 close-out note — no evidence of the closure being finalized or of any renewed client contact.",
-        "No Asana records found for this project (252603, Lucid Motors) — consistent with prior syncs; nothing to cross-check milestones against."
+        "Slack channel C0B6AL0T10T (lucidmotor-252603-bookademopaidads) still returns channel_not_found on direct read, and a channel-name search returns zero results — same as prior sync.",
+        "Workspace-wide Slack search for '252603' and 'bookademopaidads' turns up nothing newer than 2026-06-18; no messages reference project 252603 after 2026-08-05.",
+        "Slack search for 'Lucid Motors' after 8/5 surfaces only other, separate Lucid Motors project briefs (e.g. #309797, #368685, #379068, #386696) — none reference 252603 or 'Book a Demo Paid Ads'.",
+        "Asana search for '252603' and 'Lucid Motors' both returned zero matches — no Asana project record found under either name; unresolved whether GM approval to formally close ever came through."
       ],
       "last_activity": "2026-08-05",
       "team": ["Vinay", "Chris", "Stefany", "Karen"]
@@ -103,12 +103,12 @@
       "channel_name": "lucidmotor-252620-generalawarenesspaidads",
       "display_name": "Lucid Motors — General Awareness Paid Ads",
       "status": "Stale",
-      "note": "Slack channel #lucidmotor-252620-generalawarenesspaidads (C0B6N73FTJQ) again returned channel_not_found on 9/11 and no longer appears even in an archived-channel search — status is carried over from the last successful read (7/22); client contact has been silent since the 6/19 deliverable and no Asana records exist for this project.",
+      "note": "No new signal since the 6/19 deliverable; Slack channel remains inaccessible and no Asana records exist, so status is carried over unchanged from the 7/22 sync.",
       "details": [
-        "SYNC NOTE (9/11): Slack read of C0B6N73FTJQ failed with channel_not_found again, and a channel search (including archived) found zero matches for the channel name or \"lucidmotor\" — the channel appears deleted or otherwise permanently inaccessible, not just temporarily unreachable.",
-        "Workspace-wide Slack search for \"252620\"/\"Lucid Motors General Awareness\" turned up no messages newer than the 5/28 automated brief-landed notices for project 252620 — no client or team update on this specific project since the prior sync.",
-        "6/19: Assets sent to customer review; no client response landed since (internal team last confirmed the silence on 7/20; no confirmations found for 7/22 onward due to channel inaccessibility).",
-        "No Asana records found for this project via search on \"252620\", \"Lucid Motors\", and \"General Awareness\" — consistent with prior syncs; other Lucid Motors Slack briefs found (e.g. projects 289679, 290685, 309797) are unrelated projects, not 252620."
+        "Slack channel C0B6N73FTJQ (#lucidmotor-252620-generalawarenesspaidads) still returns channel_not_found as of 2026-09-26, and a workspace-wide channel-name search (including archived) for 'lucidmotor'/'252620' returns zero results.",
+        "Workspace search for '252620' and 'Lucid Motors General Awareness' turns up only two older bot-posted briefing notifications from 2026-05-28 — nothing dated after 7/22.",
+        "Lucid Motors is still an active customer overall (e.g. new project 'October Offers Ads Production' #386696 briefed 9/24), but zero messages reference project 252620 or 'General Awareness Paid Ads' specifically since 7/22.",
+        "Asana search for '252620', 'Lucid Motors', and 'Lucid Motors General Awareness' all returned empty result sets — confirms no Asana records exist for this project, consistent with the prior sync note."
       ],
       "last_activity": "2026-07-22",
       "team": ["Vinay", "Chris", "Stefany", "Karen"]
@@ -119,12 +119,12 @@
       "channel_name": "dynaparcor-201583-spt-tracmileproductlaunchimageassets",
       "display_name": "Dynapar — Product Launch Image Assets",
       "status": "Stale",
-      "note": "Slack access failed again this sync (channel_not_found, and a broader Slack search returns zero hits for that channel or for project 201583) — status carried over; no project-specific activity found anywhere since 6/30, though Monise is confirmed active elsewhere on the Dynapar account.",
+      "note": "No project-specific activity found anywhere since 6/30; Slack channel is still inaccessible and Asana has no matching project, though the Dynapar account itself remains active via unrelated projects.",
       "details": [
-        "9/11: Slack read of channel C0A9FJ9J3NX again returned channel_not_found; workspace-wide Slack search for the channel ID and for \"201583\" returned no results at all, suggesting the channel is archived/removed rather than a transient permission glitch.",
-        "8/7-8/28: Broader Slack search shows Monise and Benitta actively serving as CPMs on other current Dynapar Corporation projects (e.g. #313095, #328026, #330493, #335413) — so Monise's earlier silence was account-wide only through the prior sync, not evidence of continued unavailability; no activity specific to project 201583 was found, however.",
-        "No Asana records found for \"201583\", \"Dynapar\", \"Tracmile\", or \"Product launch image assets\" — consistent with every prior sync; project appears to not exist in the connected Asana workspace.",
-        "No project-specific (201583) activity of any kind located since the 6/30 OOO post; last confirmed project-specific signal remains 2026-06-30."
+        "Slack channel C0A9FJ9J3NX still returns channel_not_found on read (same as prior sync, checked again 2026-09-26).",
+        "Workspace-wide Slack search for '201583' surfaces only the original Jan 16 brief-drop and a Feb 16 DM confirming Vinay grabbed the project — nothing newer.",
+        "Broad search for 'Dynapar'/'Tracmile' after 6/30 returns hits only for other Dynapar projects (e.g. #283894, #313095, #328026, #335413, #336641, #357061, #368663, #377519) and account-level billing/renewal threads — none reference project 201583.",
+        "Asana search for '201583', 'Dynapar', 'Tracmile', and 'Product launch image assets' all return zero results — project is not found in the connected Asana workspace."
       ],
       "last_activity": "2026-06-30",
       "team": ["Amori", "Vinay", "Benitta", "Franco"]
@@ -135,12 +135,12 @@
       "channel_name": "strava-292674-garmin-remindmelater-retargeting-ftue-creativeresourcing",
       "display_name": "Strava — Garmin Remind Me Later Retargeting FTUE",
       "status": "Stale",
-      "note": "Project shows as fully closed in Asana (all 31/31 tasks auto-completed 8/28-8/29 by an internal integration bot) after Danielle broke the 7/22 silence with real task work on 8/19 — but Slack is now unreadable (channel_not_found), so there's no human confirmation this reflects an actual Garmin sign-off rather than an automated close, and this dashboard still has no \"Completed\" bucket to reflect it.",
+      "note": "Project remains fully auto-closed in Asana since 8/28-8/29 with no new activity or human confirmation since the last sync; Slack channel is still inaccessible.",
       "details": [
-        "8/19: Danielle completed both outstanding \"Strava | V3 IR Copy\" and \"V3 CR Copy\" tasks — the first real task movement since the 7/22 handoff to Garmin, breaking the multi-week silence flagged in the last sync.",
-        "8/28 (10:36pm UTC): The remaining 10 open tasks (V3 IR/CR Design for Vinay & Amori, V3 CR Copy for Claire, V3 Delivery, Client Feedback V3, L10 Doc, Final Exports) were all bulk-marked complete by the automated \"PROD Internal Asana Integration\" process, not by individual assignees — no comments or client sign-off notes are visible on any of them.",
-        "8/29 (6:06am UTC): Asana's current project status auto-updated to title \"Completed\", text \"Closed on 28 Aug 2026\" — all 31/31 tasks now show complete (0 open), versus 12 open at the last sync.",
-        "Slack channel C0BGWNGVCN9 returned channel_not_found on every read attempt (direct channel read and workspace-wide search) — it appears archived or no longer accessible, so no Slack messages could be checked to corroborate whether Garmin's external review actually concluded or this was a scheduled/automated close."
+        "Asana project current_status = 'Completed' / 'Closed on 28 Aug 2026', but that status update was authored by the 'PROD Internal Asana Integration' bot, not a human team member — no CPM or client sign-off note found.",
+        "All 31/31 tasks are complete; 22 of them share an identical completion burst on 2026-08-28 (sub-10-second gaps), confirming an automated bulk-close rather than sequential human work.",
+        "Only genuine human task activity after the 7/22 lull was Danielle completing 'Strava | V3 IR Copy' and 'Strava | V3 CR Copy' on 2026-08-19.",
+        "Slack channel C0BGWNGVCN9 read still fails with channel_not_found; workspace-wide search for '292674' and 'Garmin Remind Me Later' returned only messages from mid/late July — nothing newer, so no Slack-side confirmation of an actual Garmin sign-off exists as of 2026-09-26."
       ],
       "last_activity": "2026-08-29",
       "team": ["Maria", "Vinay", "Amori", "Estefania", "Claire", "Danielle"]
