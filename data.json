@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T08:08:26Z",
+  "updated_at": "2026-10-05T20:08:14Z",
   "projects": [
     {
       "project_number": "224533",
@@ -7,7 +7,7 @@
       "channel_name": "wex10-4-224533-cont-203818-10-4newclaims-paid",
       "display_name": "Wex — New Claims Paid",
       "status": "Stale",
-      "note": "Re-verified 2026-10-05 (morning): no change on 224533 — channel still inaccessible, no Slack hits, no Asana record. Two brand-new WEX 10-4 briefs landed in the last 24h, but both are separate projects.",
+      "note": "Re-verified 2026-10-05 (evening): no change on 224533 — channel still inaccessible, no Slack hits, no Asana record. Two brand-new WEX 10-4 briefs landed in the last 24h, but both are separate projects.",
       "details": [
         "Morning sync: no new project-specific Slack activity since the last evening run; a workspace search for the nine project numbers after 2026-10-03 returned only unrelated hits.",
         "slack_read_channel(C0AUNGM22DQ) returned channel_not_found again — the project channel remains inaccessible.",
@@ -30,7 +30,7 @@
       "channel_name": "mitsubishi-218254-mitsubishipowerkeyvisual",
       "display_name": "Mitsubishi — Power Key Visual",
       "status": "Stale",
-      "note": "Re-verified 2026-10-05 (morning): still delivered-but-never-closed, and the only new movement is a billing correction — 3 hours logged to 218254 on 18 Sept were misbooked and are being moved to another Mitsubishi project.",
+      "note": "Re-verified 2026-10-05 (evening): still delivered-but-never-closed, and the only new movement is a billing correction — 3 hours logged to 218254 on 18 Sept were misbooked and are being moved to another Mitsubishi project.",
       "details": [
         "Morning sync: no new project-specific Slack activity since the last evening run; a workspace search for the nine project numbers after 2026-10-03 returned only unrelated hits.",
         "Direct channel read confirms the newest in-channel message is still Emanuele Mazoni's 2026-09-08 01:55 IST post (\"Omg I can't believe we have this one approved\") — 22 days quiet.",
@@ -53,7 +53,7 @@
       "channel_name": "oysterhr-i-199961-brandassetlibrary",
       "display_name": "OysterHR — Brand Asset Library",
       "status": "Stale",
-      "note": "Re-verified 2026-10-05 (morning): unchanged — Bradley Ford's 9/24 \"nothing to action\" post is still the newest message and the project stays paused.",
+      "note": "Re-verified 2026-10-05 (evening): unchanged — Bradley Ford's 9/24 \"nothing to action\" post is still the newest message and the project stays paused.",
       "details": [
         "Morning sync: no new project-specific Slack activity since the last evening run; a workspace search for the nine project numbers after 2026-10-03 returned only unrelated hits.",
         "Channel read confirms the newest message is still Bradley Ford's 2026-09-24 02:58 IST post (\"Nothing to action, no need to follow-up on this project\").",
@@ -76,7 +76,7 @@
       "channel_name": "strava-256899-juneorganicsocialcarousels",
       "display_name": "Strava — June Organic Social Carousels",
       "status": "Stale",
-      "note": "Re-verified 2026-10-05 (morning): Asana project 256899 is still Completed/Closed (since 3 Aug 2026); task counts moved to 55/54/1 with the single open task still the recurring QC item.",
+      "note": "Re-verified 2026-10-05 (evening): Asana project 256899 is still Completed/Closed (since 3 Aug 2026); task counts moved to 55/54/1 with the single open task still the recurring QC item.",
       "details": [
         "Morning sync: no new project-specific Slack activity since the last evening run; a workspace search for the nine project numbers after 2026-10-03 returned only unrelated hits.",
         "Asana get_project(1215437381000091) returns completed:true, current_status \"Closed on 3 Aug 2026\", task_counts 55 total / 54 completed / 1 incomplete (unchanged since last sync) — one more recurring task generated and completed.",
@@ -100,7 +100,7 @@
       "channel_name": "tomtom-234532-lifestyleimagesfortomtomcommunity",
       "display_name": "TomTom — Lifestyle Images for Community",
       "status": "Stale",
-      "note": "Re-verified 2026-10-05 (morning): no change — 234532 stays closed since its 9/2 cost reconciliation, its channel is still inaccessible and no Asana record exists.",
+      "note": "Re-verified 2026-10-05 (evening): no change — 234532 stays closed since its 9/2 cost reconciliation, its channel is still inaccessible and no Asana record exists.",
       "details": [
         "Morning sync: no new project-specific Slack activity since the last evening run; a workspace search for the nine project numbers after 2026-10-03 returned only unrelated hits.",
         "slack_read_channel(C0B1P9QG830) returned channel_not_found again — the project channel remains inaccessible.",
@@ -122,7 +122,7 @@
       "channel_name": "lucidmotor-252603-bookademopaidads",
       "display_name": "Lucid Motors — Book a Demo Paid Ads",
       "status": "Stale",
-      "note": "Re-verified 2026-10-05 (morning): still no Slack or Asana activity on 252603, the channel does not exist even in archived form, and no closure decision has ever been recorded.",
+      "note": "Re-verified 2026-10-05 (evening): still no Slack or Asana activity on 252603, the channel does not exist even in archived form, and no closure decision has ever been recorded.",
       "details": [
         "Morning sync: no new project-specific Slack activity since the last evening run; a workspace search for the nine project numbers after 2026-10-03 returned only unrelated hits.",
         "slack_read_channel(C0B6AL0T10T) returned channel_not_found — the channel ID was not recreated or renamed.",
@@ -144,7 +144,7 @@
       "channel_name": "lucidmotor-252620-generalawarenesspaidads",
       "display_name": "Lucid Motors — General Awareness Paid Ads",
       "status": "Stale",
-      "note": "Re-verified 2026-10-05 (morning): unchanged — 252620 has never shown a single human message in Slack, its channel does not exist, and there is no Asana record.",
+      "note": "Re-verified 2026-10-05 (evening): unchanged — 252620 has never shown a single human message in Slack, its channel does not exist, and there is no Asana record.",
       "details": [
         "Morning sync: no new project-specific Slack activity since the last evening run; a workspace search for the nine project numbers after 2026-10-03 returned only unrelated hits.",
         "slack_read_channel(C0B6N73FTJQ) returned channel_not_found.",
@@ -166,7 +166,7 @@
       "channel_name": "dynaparcor-201583-spt-tracmileproductlaunchimageassets",
       "display_name": "Dynapar — Product Launch Image Assets",
       "status": "Stale",
-      "note": "Re-verified 2026-10-05 (morning): unchanged and by far the oldest item on the board — no activity of any kind since February, with the original deadline now more than eight months past.",
+      "note": "Re-verified 2026-10-05 (evening): unchanged and by far the oldest item on the board — no activity of any kind since February, with the original deadline now more than eight months past.",
       "details": [
         "Morning sync: no new project-specific Slack activity since the last evening run; a workspace search for the nine project numbers after 2026-10-03 returned only unrelated hits.",
         "slack_read_channel(C0A9FJ9J3NX) returned channel_not_found.",
@@ -188,7 +188,7 @@
       "channel_name": "strava-292674-garmin-remindmelater-retargeting-ftue-creativeresourcing",
       "display_name": "Strava — Garmin Remind Me Later Retargeting FTUE",
       "status": "Stale",
-      "note": "Re-verified 2026-10-05 (morning): Asana still shows the project bot-closed on 28 Aug 2026 with task counts unchanged at 31/31/0, and no human sign-off has ever been recorded.",
+      "note": "Re-verified 2026-10-05 (evening): Asana still shows the project bot-closed on 28 Aug 2026 with task counts unchanged at 31/31/0, and no human sign-off has ever been recorded.",
       "details": [
         "Morning sync: no new project-specific Slack activity since the last evening run; a workspace search for the nine project numbers after 2026-10-03 returned only unrelated hits.",
         "Asana get_project(1216525473937947) returns completed:true, completed_at 2026-08-29, current_status \"Closed on 28 Aug 2026\", task_counts 31/31/0 — identical to the last sync.",
